@@ -86,7 +86,7 @@ namespace Cambly_Reports
             if (rtxbxGrammar.Text.Length == 0 & rtxbxVocab.Text.Length == 0) 
             {
                 DialogResult res = MessageBox.Show(
-                                    "No information entered for lesson notes." +
+                                    "No information entered for lesson notes. " +
                                     "Are you sure you want to export this to a document?",
                                     "No Lesson Notes",
                                     MessageBoxButtons.YesNo,
@@ -330,7 +330,7 @@ namespace Cambly_Reports
 
                 string fixedDate = ConvertDateFormat(txbxDate.Text);
                 document.SaveToFile($"D:/Documents/teaching/{fixedDate} - {cmbxStudentName.Text}.docx", FileFormat.Docx);
-                MessageBox.Show("All tasks are finished.", "doc processing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("All tasks are finished.", "Doc Processing", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 document.Close();
             }
             catch (Exception ex)

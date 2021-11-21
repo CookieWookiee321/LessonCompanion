@@ -197,6 +197,32 @@ namespace Cambly_Reports
 
                     lblLessonCount.Text = $"Total lesson count: {dgvTopicList.Rows.Count}";
                 }
+                else if (tbSearch.Text.Length == 0)
+                {
+                    dgvTopicList.Rows.Clear();
+
+                    string[] row;
+
+                    thisStudentID = allStudentsInverse[$"{lbStudentList.SelectedItem.ToString()}"]; //gets the stuID associated
+                                                                                                    //with the selected name
+                    OleDbCommand cmdFetch = conn.CreateCommand();
+                    cmdFetch.CommandText = $"SELECT lDate, lTopic FROM Lesson WHERE lStudent = {thisStudentID} ORDER BY lDate Desc";
+                    OleDbDataReader reader = cmdFetch.ExecuteReader();
+
+                    if (reader != null && reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            DateTime hi = (DateTime)reader["lDate"];
+                            string lo = hi.ToString("yyyy/MM/dd");
+
+                            row = new string[] { $"{lo}", $"{(string)reader["lTopic"]}" };
+                            dgvTopicList.Rows.Add(row);
+                        }
+                    }
+
+                    lblLessonCount.Text = $"Total lesson count: {dgvTopicList.Rows.Count}";
+                }
             }
             catch (Exception ex)
             {
