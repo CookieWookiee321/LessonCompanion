@@ -83,29 +83,32 @@ namespace Cambly_Reports
              *  Display a dialog asking if you still want to add this to a document
              *  Otherwise, don't export it
              */
-            if (rtxbxGrammar.Text.Length == 0 & rtxbxVocab.Text.Length == 0) 
+            if (rtxbxVocab.Enabled == true && rtxbxGrammar.Enabled == true)
             {
-                DialogResult res = MessageBox.Show(
-                                    "No information entered for lesson notes. " +
-                                    "Are you sure you want to export this to a document?",
-                                    "No Lesson Notes",
-                                    MessageBoxButtons.YesNo,
-                                    MessageBoxIcon.Question);
+                if (rtxbxGrammar.Text.Length == 0 & rtxbxVocab.Text.Length == 0)
+                {
+                    DialogResult res = MessageBox.Show(
+                                        "No information entered for lesson notes. " +
+                                        "Are you sure you want to export this to a document?",
+                                        "No Lesson Notes",
+                                        MessageBoxButtons.YesNo,
+                                        MessageBoxIcon.Question);
 
-                if (res == DialogResult.Yes) 
+                    if (res == DialogResult.Yes)
+                    {
+                        ExportToDoc();
+                        hasSaved = true;
+                    }
+                    else
+                    {
+                        hasSaved = true;
+                    }
+                }
+
+                if (hasSaved == false)
                 {
                     ExportToDoc();
-                    hasSaved = true;
                 }
-                else
-                {
-                    hasSaved = true;
-                }
-            }
-
-            if (hasSaved == false)
-            {
-                ExportToDoc();
             }
 
             //Add lesson to DB
@@ -276,6 +279,7 @@ namespace Cambly_Reports
                 return returnValue;
             }
         }
+
         public void RefreshComboBox()
         {
             OleDbCommand cmd = conn.CreateCommand();
@@ -297,6 +301,7 @@ namespace Cambly_Reports
             }
             
         }
+
         Dictionary<string, string> GetReplaceDictionary()
         {
             Dictionary<string, string> replaceDict = new Dictionary<string, string>();
@@ -308,12 +313,14 @@ namespace Cambly_Reports
 
             return replaceDict;
         }
+
         public string ConvertDateFormat(string originalDateFormat)
         {
             string[] splitDate = originalDateFormat.Split('/', 3);
 
             return String.Concat($"{splitDate[0]}-{splitDate[1]}-{splitDate[2]}");
         }
+
         public void ExportToDoc()
         {
             //Try... catch block to send notes to document
@@ -362,6 +369,20 @@ namespace Cambly_Reports
         private void studentListToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new AllStudents().Show();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.CheckState == CheckState.Checked)
+            {
+                rtxbxGrammar.Enabled = true;
+                rtxbxVocab.Enabled = true;
+            }
+            else
+            {
+                rtxbxGrammar.Enabled = false;
+                rtxbxVocab.Enabled = false;
+            }
         }
     }
 }

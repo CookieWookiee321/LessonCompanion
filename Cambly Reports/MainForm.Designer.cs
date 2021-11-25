@@ -44,6 +44,7 @@ namespace Cambly_Reports
             this.tsmiRestart = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStudentListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblGrammar = new System.Windows.Forms.Label();
             this.rtxbxVocab = new System.Windows.Forms.RichTextBox();
             this.lblVocab = new System.Windows.Forms.Label();
@@ -51,9 +52,11 @@ namespace Cambly_Reports
             this.diaSave = new System.Windows.Forms.SaveFileDialog();
             this.calDate = new System.Windows.Forms.MonthCalendar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.studentListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbxStudentName
@@ -143,6 +146,12 @@ namespace Cambly_Reports
             this.viewStudentListToolStripMenuItem.Name = "viewStudentListToolStripMenuItem";
             this.viewStudentListToolStripMenuItem.Click += new System.EventHandler(this.viewStudentListToolStripMenuItem_Click);
             // 
+            // studentListToolStripMenuItem
+            // 
+            resources.ApplyResources(this.studentListToolStripMenuItem, "studentListToolStripMenuItem");
+            this.studentListToolStripMenuItem.Name = "studentListToolStripMenuItem";
+            this.studentListToolStripMenuItem.Click += new System.EventHandler(this.studentListToolStripMenuItem_Click);
+            // 
             // lblGrammar
             // 
             resources.ApplyResources(this.lblGrammar, "lblGrammar");
@@ -193,24 +202,33 @@ namespace Cambly_Reports
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // studentListToolStripMenuItem
+            // groupBox2
             // 
-            resources.ApplyResources(this.studentListToolStripMenuItem, "studentListToolStripMenuItem");
-            this.studentListToolStripMenuItem.Name = "studentListToolStripMenuItem";
-            this.studentListToolStripMenuItem.Click += new System.EventHandler(this.studentListToolStripMenuItem_Click);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.calDate);
+            this.groupBox2.Controls.Add(this.rtxbxVocab);
+            this.groupBox2.Controls.Add(this.rtxbxGrammar);
+            this.groupBox2.Controls.Add(this.lblVocab);
+            this.groupBox2.Controls.Add(this.lblGrammar);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // checkBox1
+            // 
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // ReportCreator
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.calDate);
             this.Controls.Add(this.btnExport);
-            this.Controls.Add(this.lblVocab);
-            this.Controls.Add(this.rtxbxVocab);
-            this.Controls.Add(this.lblGrammar);
-            this.Controls.Add(this.rtxbxGrammar);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ReportCreator";
@@ -221,6 +239,8 @@ namespace Cambly_Reports
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,6 +270,8 @@ namespace Cambly_Reports
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ToolStripMenuItem studentListToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
