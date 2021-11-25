@@ -19,6 +19,8 @@ namespace Cambly_Reports
             conn = new OleDbConnection();               //connect to DB on load
             conn.ConnectionString = connectionString;
             conn.Open();
+
+            tbTopic.Text = "Intro";
         }
 
         public int FindStuID(string studentName)
@@ -97,6 +99,19 @@ namespace Cambly_Reports
         {
 
             conn.Close();
+        }
+
+        private void tbTopic_Click(object sender, EventArgs e)
+        {
+            tbTopic.Text = null;
+        }
+
+        private void tbTopic_Leave(object sender, EventArgs e)
+        {
+            if (tbTopic.Text.Length == 0)
+            {
+                tbTopic.Text = "Intro";
+            }
         }
     }
 }

@@ -103,7 +103,7 @@ namespace Cambly_Reports
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(16, 6);
+            this.monthCalendar1.Location = new System.Drawing.Point(12, 6);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 15;
             this.monthCalendar1.Visible = false;
@@ -125,6 +125,8 @@ namespace Cambly_Reports
             this.tbTopic.Name = "tbTopic";
             this.tbTopic.Size = new System.Drawing.Size(151, 27);
             this.tbTopic.TabIndex = 17;
+            this.tbTopic.Click += new System.EventHandler(this.tbTopic_Click);
+            this.tbTopic.Leave += new System.EventHandler(this.tbTopic_Leave);
             // 
             // childNewStudent
             // 
