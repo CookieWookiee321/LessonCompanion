@@ -20,7 +20,6 @@ namespace Cambly_Reports
     {
         ArrayList studentArrayList = new ArrayList();
         Document document = new Document();
-        string folderPath = "D:/Documents/teaching/";
 
         string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source = ../../../cambly.accdb; Persist Security Info=False";
         OleDbConnection conn;
@@ -75,6 +74,7 @@ namespace Cambly_Reports
         }
 
         #region Buttons
+
         private void btnExport_Click(object sender, EventArgs e) 
         {
             bool hasSaved = false;
@@ -127,17 +127,13 @@ namespace Cambly_Reports
                         cmd.CommandText = lessonInfo;
                         cmd.ExecuteNonQuery();
 
-                        DialogResult d = MessageBox.Show("Clear the data fields?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (d == DialogResult.Yes)
-                        {
-                            txbxTopic.Clear();
-                            txbxDate.Clear();
-                            cmbxStudentName.SelectedIndex = -1;
-                            rtxbxVocab.Clear();
-                            rtxbxGrammar.Clear();
+                        txbxTopic.Clear();
+                        txbxDate.Clear();
+                        cmbxStudentName.SelectedItem = null;
+                        rtxbxVocab.Clear();
+                        rtxbxGrammar.Clear();
 
-                            cmbxStudentName.Select();
-                        }
+                        cmbxStudentName.Select();
                     }
                     catch (Exception ex)
                     {
@@ -153,15 +149,18 @@ namespace Cambly_Reports
             {
                 MessageBox.Show("Enter values for a name, topic, and date.");
             }
-        } //export to Word document
+        } //export to Word document + add lesson to database
+
         private void btnAddArray_Click(object sender, EventArgs e)
         {
             
         } //add lesson to database [OLD]
+
         private void TodaysDate_Click(object sender, EventArgs e)
         {
             txbxDate.Text = DateTime.Today.ToString("yyyy/MM/dd");
         } //set today's date in the date textbox
+
         #endregion
 
             #region ToolStripMenu
@@ -171,6 +170,7 @@ namespace Cambly_Reports
             childNewStudent form = new childNewStudent();
             form.Show();
         } //add new student
+
         private void tsmiOnlyRecent_Click(object sender, EventArgs e)
         {
             if (onlyRecent == false)
@@ -186,19 +186,23 @@ namespace Cambly_Reports
             cmbxStudentName.Items.Clear();
             RefreshComboBox();
         } //#doesn't work# display only recent students 
+
         private void tsmiChangeSaveLoc_Click(object sender, EventArgs e)
         {
             diaSave.ShowDialog();
         }  //#doesn't work# change save location for document export 
+
         private void restartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Restart();
         } //restart the application
+
         private void viewStudentListToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LessonList studentList = new LessonList();
             studentList.Show();
         } //open the Lesson List form
+
 
         #endregion
 
@@ -224,14 +228,17 @@ namespace Cambly_Reports
 
             calDate.Visible = false;
         }
+
         private void calDate_Leave(object sender, EventArgs e)
         {
             calDate.Visible = false;
         }
+
         private void calDate_MouseLeave(object sender, EventArgs e)
         {
             calDate.Visible = false;
         }
+
         private void calDate_DateChanged(object sender, DateRangeEventArgs e)
         {
             //if (calDate.SelectionStart.Month < 10 & calDate.SelectionStart.Day < 10)
@@ -253,12 +260,14 @@ namespace Cambly_Reports
 
             //calDate.Visible = false;
         }
+
             #endregion
 
 
         #endregion
 
         #region FUNCTIONS
+
         public int FindStuID(string studentName)
         {
             int returnValue = -1;
