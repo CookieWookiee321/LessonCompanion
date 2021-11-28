@@ -154,6 +154,7 @@ namespace Cambly_Reports
             dgvTopicList.Columns[0].Name = "Date";
             dgvTopicList.Columns[1].Name = "Topic";
             dgvTopicList.Columns[0].Width = 200;
+            dgvTopicList.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void chbRecent_CheckedChanged(object sender, EventArgs e)
