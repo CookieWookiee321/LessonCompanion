@@ -19,6 +19,7 @@ namespace Cambly_Reports
     public partial class ReportCreator : Form
     {
         ArrayList studentArrayList = new ArrayList();
+        List<string> studentsList = new List<string>();
         Document document = new Document();
 
         string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source = ../../../cambly.accdb; Persist Security Info=False";
@@ -50,6 +51,25 @@ namespace Cambly_Reports
                 conn.Open();
 
                 RefreshComboBox();
+
+                OleDbCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "SELECT stuID, sName FROM Student ORDER BY sName";
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                if (reader != null && reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        studentsList.Add((string)reader["sName"]);
+                    }
+                }
+
+                var source = new AutoCompleteStringCollection();
+                source.AddRange(studentsList.ToArray());
+
+                cmbxStudentName.AutoCompleteCustomSource = source;
+                cmbxStudentName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                cmbxStudentName.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
                 cmbxStudentName.Select();
             }
@@ -354,7 +374,6 @@ namespace Cambly_Reports
                 MessageBox.Show($"ERROR... {ex}... {ex.Message}");
             }
         }
-
 
         #endregion
 

@@ -68,10 +68,7 @@ namespace Cambly_Reports
                                             $"VALUES ('{tbxCFirstLesson.Text}', '{tbTopic.Text}', {stuID})";
                 cmd.ExecuteNonQuery();
 
-                tbxCFirstLesson.Clear();
-                tbxCCountry.Clear();
-                tbxCName.Clear();
-                tbTopic.Clear();
+                this.Close();
             }
             catch (Exception ex)
             {
