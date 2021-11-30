@@ -94,7 +94,6 @@ namespace Cambly_Reports
 
         private void childNewStudent_FormClosing(object sender, FormClosingEventArgs e)
         {
-
             conn.Close();
         }
 

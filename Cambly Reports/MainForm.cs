@@ -1,26 +1,19 @@
-﻿using System;
+﻿using Spire.Doc;
+using System;
 using System.Collections;
-using System.IO;
-using Spire.Doc;
-using System.Data;
-using Spire.Doc.Documents;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Cambly_Reports
 {
     public partial class ReportCreator : Form
     {
         ArrayList studentArrayList = new ArrayList();
-        List<string> studentsList = new List<string>();
+        static List<string> studentsList = new List<string>();
         Document document = new Document();
+        string reportOuput;
 
         string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source = ../../../cambly.accdb; Persist Security Info=False";
         OleDbConnection conn;
@@ -52,24 +45,9 @@ namespace Cambly_Reports
 
                 RefreshComboBox();
 
-                OleDbCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "SELECT stuID, sName FROM Student ORDER BY sName";
-                OleDbDataReader reader = cmd.ExecuteReader();
+                GetSaveLocation();
 
-                if (reader != null && reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        studentsList.Add((string)reader["sName"]);
-                    }
-                }
-
-                var source = new AutoCompleteStringCollection();
-                source.AddRange(studentsList.ToArray());
-
-                cmbxStudentName.AutoCompleteCustomSource = source;
-                cmbxStudentName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                cmbxStudentName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                InitializeAutocomplete(conn, cmbxStudentName);
 
                 cmbxStudentName.Select();
             }
@@ -149,7 +127,7 @@ namespace Cambly_Reports
 
                         txbxTopic.Clear();
                         txbxDate.Clear();
-                        cmbxStudentName.SelectedItem = null;
+                        cmbxStudentName.SelectedItem = "";
                         rtxbxVocab.Clear();
                         rtxbxGrammar.Clear();
 
@@ -288,6 +266,20 @@ namespace Cambly_Reports
 
         #region FUNCTIONS
 
+        private void GetSaveLocation()
+        {
+            string query = 
+                $"SELECT SaveDir, TemplateFilename " +
+                $"FROM Saves;";
+
+            OleDbDataReader reader = new OleDbCommand(query, conn).ExecuteReader();
+
+            while (reader.Read())
+            {
+                reportOuput = $"{(string)reader["SaveDir"]}{(string)reader["TemplateFilename"]}";
+            }
+        }
+
         public int FindStuID(string studentName)
         {
             int returnValue = -1;
@@ -355,7 +347,7 @@ namespace Cambly_Reports
             //Try... catch block to send notes to document
             try
             {
-                document.LoadFromFile("D:/Documents/teaching/-TEMPLATE.docx");
+                document.LoadFromFile(reportOuput);
 
                 Dictionary<string, string> dictReplace = GetReplaceDictionary();
 
@@ -373,6 +365,28 @@ namespace Cambly_Reports
             {
                 MessageBox.Show($"ERROR... {ex}... {ex.Message}");
             }
+        }
+
+        public static void InitializeAutocomplete(OleDbConnection connection, ComboBox control)
+        {
+            OleDbCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "SELECT stuID, sName FROM Student ORDER BY sName";
+            OleDbDataReader reader = cmd.ExecuteReader();
+
+            if (reader != null && reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    studentsList.Add((string)reader["sName"]);
+                }
+            }
+
+            var source = new AutoCompleteStringCollection();
+            source.AddRange(studentsList.ToArray());
+
+            control.AutoCompleteCustomSource = source;
+            control.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            control.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
         #endregion
@@ -411,6 +425,11 @@ namespace Cambly_Reports
                 rtxbxGrammar.Enabled = false;
                 rtxbxVocab.Enabled = false;
             }
+        }
+
+        private void ReportCreator_Enter(object sender, EventArgs e)
+        {
+            InitializeAutocomplete(conn, cmbxStudentName);
         }
     }
 }

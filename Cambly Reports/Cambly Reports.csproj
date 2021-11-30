@@ -5,6 +5,10 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>Cambly_Reports</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
+    <SignAssembly>false</SignAssembly>
+    <Authors>Michael Cullen</Authors>
+    <Company />
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

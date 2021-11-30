@@ -235,6 +235,7 @@ namespace Cambly_Reports
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ReportCreator_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ReportCreator_FormClosed);
             this.Load += new System.EventHandler(this.ReportCreator_Load);
+            this.Enter += new System.EventHandler(this.ReportCreator_Enter);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
