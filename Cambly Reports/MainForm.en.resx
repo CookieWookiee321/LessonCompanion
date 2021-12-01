@@ -129,6 +129,9 @@
   <data name="tsmiNewStudent.Text" xml:space="preserve">
     <value>New student</value>
   </data>
+  <data name="tsmiSaveLoc.Text" xml:space="preserve">
+    <value>Save Location</value>
+  </data>
   <data name="tsmiRestart.Text" xml:space="preserve">
     <value>Restart</value>
   </data>

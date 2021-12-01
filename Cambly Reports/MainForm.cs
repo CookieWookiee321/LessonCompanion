@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Cambly_Reports
@@ -71,6 +72,44 @@ namespace Cambly_Reports
             Application.Exit();
         }
 
+        private void ReportCreator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Closing Connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        private void studentListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AllStudents().Show();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.CheckState == CheckState.Checked)
+            {
+                rtxbxGrammar.Enabled = true;
+                rtxbxVocab.Enabled = true;
+            }
+            else
+            {
+                rtxbxGrammar.Enabled = false;
+                rtxbxVocab.Enabled = false;
+            }
+        }
+
+        private void ReportCreator_Enter(object sender, EventArgs e)
+        {
+            InitializeAutocomplete(conn, cmbxStudentName);
+        }
+
         #region Buttons
 
         private void btnExport_Click(object sender, EventArgs e) 
@@ -127,7 +166,7 @@ namespace Cambly_Reports
 
                         txbxTopic.Clear();
                         txbxDate.Clear();
-                        cmbxStudentName.SelectedItem = "";
+                        cmbxStudentName.SelectedIndex = -1;
                         rtxbxVocab.Clear();
                         rtxbxGrammar.Clear();
 
@@ -159,9 +198,14 @@ namespace Cambly_Reports
             txbxDate.Text = DateTime.Today.ToString("yyyy/MM/dd");
         } //set today's date in the date textbox
 
+        private void bAllStudents_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
 
-            #region ToolStripMenu
+        #region ToolStripMenu
 
         private void tsmiNewStudent_Click(object sender, EventArgs e)
         {
@@ -391,45 +435,22 @@ namespace Cambly_Reports
 
         #endregion
 
-        private void ReportCreator_FormClosing(object sender, FormClosingEventArgs e)
+        private void tsmiSaveLoc_Click(object sender, EventArgs e)
         {
-            try
-            {
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error Closing Connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            diaSave.ShowDialog();
         }
 
-        private void bAllStudents_Click(object sender, EventArgs e)
+        private void cmbxStudentName_Leave(object sender, EventArgs e)
         {
-            
-        }
-
-        private void studentListToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new AllStudents().Show();
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.CheckState == CheckState.Checked)
+            if (Char.IsLower(cmbxStudentName.Text[0]))
             {
-                rtxbxGrammar.Enabled = true;
-                rtxbxVocab.Enabled = true;
-            }
-            else
-            {
-                rtxbxGrammar.Enabled = false;
-                rtxbxVocab.Enabled = false;
-            }
-        }
+                StringBuilder sb = new StringBuilder();
 
-        private void ReportCreator_Enter(object sender, EventArgs e)
-        {
-            InitializeAutocomplete(conn, cmbxStudentName);
+                sb.Append(cmbxStudentName.Text);
+                sb[0] = Char.ToUpper(sb[0]);
+
+                cmbxStudentName.Text = sb.ToString();
+            }
         }
     }
 }

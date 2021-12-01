@@ -41,6 +41,7 @@ namespace Cambly_Reports
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.msFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiNewStudent = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSaveLoc = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRestart = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStudentListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,6 +65,7 @@ namespace Cambly_Reports
             resources.ApplyResources(this.cmbxStudentName, "cmbxStudentName");
             this.cmbxStudentName.FormattingEnabled = true;
             this.cmbxStudentName.Name = "cmbxStudentName";
+            this.cmbxStudentName.Leave += new System.EventHandler(this.cmbxStudentName_Leave);
             // 
             // rtxbxGrammar
             // 
@@ -118,6 +120,7 @@ namespace Cambly_Reports
             resources.ApplyResources(this.msFile, "msFile");
             this.msFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiNewStudent,
+            this.tsmiSaveLoc,
             this.tsmiRestart,
             this.closeToolStripMenuItem});
             this.msFile.Name = "msFile";
@@ -127,6 +130,12 @@ namespace Cambly_Reports
             resources.ApplyResources(this.tsmiNewStudent, "tsmiNewStudent");
             this.tsmiNewStudent.Name = "tsmiNewStudent";
             this.tsmiNewStudent.Click += new System.EventHandler(this.tsmiNewStudent_Click);
+            // 
+            // tsmiSaveLoc
+            // 
+            resources.ApplyResources(this.tsmiSaveLoc, "tsmiSaveLoc");
+            this.tsmiSaveLoc.Name = "tsmiSaveLoc";
+            this.tsmiSaveLoc.Click += new System.EventHandler(this.tsmiSaveLoc_Click);
             // 
             // tsmiRestart
             // 
@@ -273,6 +282,7 @@ namespace Cambly_Reports
         private System.Windows.Forms.ToolStripMenuItem studentListToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSaveLoc;
     }
 }
 
