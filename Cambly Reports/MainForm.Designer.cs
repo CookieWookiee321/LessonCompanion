@@ -55,6 +55,7 @@ namespace Cambly_Reports
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.studentNotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -112,7 +113,8 @@ namespace Cambly_Reports
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.msFile,
             this.viewStudentListToolStripMenuItem,
-            this.studentListToolStripMenuItem});
+            this.studentListToolStripMenuItem,
+            this.studentNotesToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             // 
             // msFile
@@ -230,6 +232,12 @@ namespace Cambly_Reports
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // studentNotesToolStripMenuItem
+            // 
+            resources.ApplyResources(this.studentNotesToolStripMenuItem, "studentNotesToolStripMenuItem");
+            this.studentNotesToolStripMenuItem.Name = "studentNotesToolStripMenuItem";
+            this.studentNotesToolStripMenuItem.Click += new System.EventHandler(this.studentNotesToolStripMenuItem_Click);
+            // 
             // ReportCreator
             // 
             resources.ApplyResources(this, "$this");
@@ -283,6 +291,7 @@ namespace Cambly_Reports
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ToolStripMenuItem tsmiSaveLoc;
+        private System.Windows.Forms.ToolStripMenuItem studentNotesToolStripMenuItem;
     }
 }
 

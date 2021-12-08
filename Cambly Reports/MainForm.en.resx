@@ -147,6 +147,12 @@
   <data name="studentListToolStripMenuItem.Text" xml:space="preserve">
     <value>Student List</value>
   </data>
+  <data name="studentNotesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 24</value>
+  </data>
+  <data name="studentNotesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Student Notes</value>
+  </data>
   <data name="lblGrammar.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>

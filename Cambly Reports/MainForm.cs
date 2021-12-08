@@ -6,6 +6,7 @@ using System.Data.OleDb;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Cambly_Reports
 {
@@ -17,7 +18,7 @@ namespace Cambly_Reports
         string reportOuput;
 
         string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source = ../../../cambly.accdb; Persist Security Info=False";
-        OleDbConnection conn;
+        public static OleDbConnection conn;
 
         bool onlyRecent = false;
 
@@ -442,7 +443,8 @@ namespace Cambly_Reports
 
         private void cmbxStudentName_Leave(object sender, EventArgs e)
         {
-            if (Char.IsLower(cmbxStudentName.Text[0]))
+            if (cmbxStudentName.SelectedItem != null 
+                    && Char.IsLower(cmbxStudentName.Text[0]))
             {
                 StringBuilder sb = new StringBuilder();
 
@@ -451,6 +453,11 @@ namespace Cambly_Reports
 
                 cmbxStudentName.Text = sb.ToString();
             }
+        }
+
+        private void studentNotesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new StudentNotes().Show();
         }
     }
 }
