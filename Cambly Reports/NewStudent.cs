@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using MySql.Data.MySqlClient;
 
 namespace Cambly_Reports
 {
     public partial class childNewStudent : Form
     {
-        string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source = ../../../cambly.accdb; Persist Security Info=False";
-        OleDbConnection conn;
+        string connectionString = "server=localhost;user id=root;database=cambly;password=W3dn35d33y5#;persistsecurityinfo=True";
+        MySqlConnection conn;
 
         public childNewStudent()
         {
@@ -16,7 +17,7 @@ namespace Cambly_Reports
 
         private void childNewStudent_Load(object sender, EventArgs e)
         {
-            conn = new OleDbConnection();               //connect to DB on load
+            conn = new MySqlConnection();               //connect to DB on load
             conn.ConnectionString = connectionString;
             conn.Open();
 
@@ -26,9 +27,9 @@ namespace Cambly_Reports
         public int FindStuID(string studentName)
         {
             int returnValue = -1;
-            OleDbCommand cmd = conn.CreateCommand();
+            MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandText = $"SELECT stuID FROM Student WHERE sName = '{studentName}'";
-            OleDbDataReader dbRead = cmd.ExecuteReader();
+            MySqlDataReader dbRead = cmd.ExecuteReader();
 
             if (dbRead != null && dbRead.HasRows)
             {
@@ -57,7 +58,7 @@ namespace Cambly_Reports
                     name = tbxCName.Text + " " + counter;
                 }
 
-                OleDbCommand cmd = conn.CreateCommand();        //add new student to DB
+                MySqlCommand cmd = conn.CreateCommand();        //add new student to DB
                 cmd.CommandText = "INSERT INTO Student(sName, sCountry, firstLesson)" +
                                     $"VALUES ('{name}', '{tbxCCountry.Text}', '{tbxCFirstLesson.Text}')";
                 cmd.ExecuteNonQuery();

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using MySql.Data.MySqlClient;
 
 namespace Cambly_Reports
 {
@@ -23,12 +24,12 @@ namespace Cambly_Reports
         private void StudentNotes_Load(object sender, EventArgs e)
         {
             //Add names to combobox1
-            OleDbCommand cmd = ReportCreator.conn.CreateCommand();
-            cmd.CommandText = "SELECT DISTINCT TOP 10 Student.stuID, Student.sName, Lesson.lStudent " +
+            MySqlCommand cmd = ReportCreator.conn.CreateCommand();
+            cmd.CommandText = "SELECT Student.stuID, Student.sName, Lesson.lStudent " +
                     "FROM Lesson INNER JOIN Student " +
                         "ON Student.stuID = Lesson.lStudent " +
                     "ORDER BY sName;";
-            OleDbDataReader read = cmd.ExecuteReader();
+            MySqlDataReader read = cmd.ExecuteReader();
 
             if (read != null && read.HasRows)
             {
@@ -39,10 +40,15 @@ namespace Cambly_Reports
                         comboBox1.Items.Add((string)read["sName"]);
                     }
                 }
+
+                read.Close();
             }
 
-            //Initialize automcomplete
-            ReportCreator.InitializeAutocomplete(ReportCreator.conn, comboBox1);
+            //Select name
+            if (comboBox1.Items.Contains(ReportCreator.studentName))
+            {
+                comboBox1.SelectedItem = ReportCreator.studentName;
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -52,11 +58,25 @@ namespace Cambly_Reports
                 $"FROM Student " +
                 $"WHERE sName = '{comboBox1.SelectedItem}';";
 
-            OleDbDataReader reader = new OleDbCommand(x, ReportCreator.conn).ExecuteReader();
+            MySqlDataReader reader = new MySqlCommand(x, ReportCreator.conn).ExecuteReader();
 
-            while (reader.Read())
+            if (reader != null && reader.HasRows)
             {
-                textBox1.Text = (string)reader["sName"];
+                while (reader.Read())
+                {
+                    var bomRim = reader["notes"];
+                    string value = (bomRim == DBNull.Value) ? string.Empty : bomRim.ToString();
+
+                    if (value.Length == 0)
+                    {
+                        textBox1.Text = "";
+                    }
+                    else
+                    {
+                        textBox1.Text = value;
+                    }
+                }
+                reader.Close();
             }
         }
 
@@ -65,12 +85,15 @@ namespace Cambly_Reports
             string x = 
                 $"UPDATE Student " +
                 $"SET notes = ? " +
-                $"WHERE sName = {comboBox1.SelectedItem};";
+                $"WHERE sName = '{comboBox1.SelectedItem}';";
 
-            OleDbCommand command = new OleDbCommand(x, ReportCreator.conn);
-            OleDbParameter[] param = new OleDbParameter[1];
-            param[0] = new OleDbParameter("?", textBox1.Text);
+            MySqlCommand command = new MySqlCommand(x, ReportCreator.conn);
+            MySqlParameter[] param = new MySqlParameter[1];
+            param[0] = new MySqlParameter("?", textBox1.Text);
+            command.Parameters.Add(param[0]);
             command.ExecuteNonQuery();
+
+            this.Dispose();
         }
     }
 }

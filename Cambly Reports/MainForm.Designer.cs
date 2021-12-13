@@ -46,6 +46,7 @@ namespace Cambly_Reports
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStudentListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentNotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblGrammar = new System.Windows.Forms.Label();
             this.rtxbxVocab = new System.Windows.Forms.RichTextBox();
             this.lblVocab = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@ namespace Cambly_Reports
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.studentNotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -66,6 +66,8 @@ namespace Cambly_Reports
             resources.ApplyResources(this.cmbxStudentName, "cmbxStudentName");
             this.cmbxStudentName.FormattingEnabled = true;
             this.cmbxStudentName.Name = "cmbxStudentName";
+            this.cmbxStudentName.SelectedIndexChanged += new System.EventHandler(this.cmbxStudentName_SelectedIndexChanged);
+            this.cmbxStudentName.TextChanged += new System.EventHandler(this.cmbxStudentName_TextChanged);
             this.cmbxStudentName.Leave += new System.EventHandler(this.cmbxStudentName_Leave);
             // 
             // rtxbxGrammar
@@ -163,6 +165,12 @@ namespace Cambly_Reports
             this.studentListToolStripMenuItem.Name = "studentListToolStripMenuItem";
             this.studentListToolStripMenuItem.Click += new System.EventHandler(this.studentListToolStripMenuItem_Click);
             // 
+            // studentNotesToolStripMenuItem
+            // 
+            resources.ApplyResources(this.studentNotesToolStripMenuItem, "studentNotesToolStripMenuItem");
+            this.studentNotesToolStripMenuItem.Name = "studentNotesToolStripMenuItem";
+            this.studentNotesToolStripMenuItem.Click += new System.EventHandler(this.studentNotesToolStripMenuItem_Click);
+            // 
             // lblGrammar
             // 
             resources.ApplyResources(this.lblGrammar, "lblGrammar");
@@ -231,12 +239,6 @@ namespace Cambly_Reports
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // studentNotesToolStripMenuItem
-            // 
-            resources.ApplyResources(this.studentNotesToolStripMenuItem, "studentNotesToolStripMenuItem");
-            this.studentNotesToolStripMenuItem.Name = "studentNotesToolStripMenuItem";
-            this.studentNotesToolStripMenuItem.Click += new System.EventHandler(this.studentNotesToolStripMenuItem_Click);
             // 
             // ReportCreator
             // 

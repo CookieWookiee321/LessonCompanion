@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using MySql.Data.MySqlClient;
 
 namespace Cambly_Reports
 {
     public partial class AllStudents : Form
     {
-        string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source = ../../../cambly.accdb; Persist Security Info=False";
-        OleDbConnection conn;
+        string connectionString = "server=localhost;user id=root;database=cambly;password=W3dn35d33y5#;persistsecurityinfo=True";
+        MySqlConnection conn;
 
         public AllStudents()
         {
@@ -23,16 +24,16 @@ namespace Cambly_Reports
 
             try
             {
-                conn = new OleDbConnection();
+                conn = new MySqlConnection();
                 conn.ConnectionString = connectionString;
                 conn.Open();
 
-                OleDbCommand command = conn.CreateCommand();
+                MySqlCommand command = conn.CreateCommand();
                 command.CommandText =
                     "SELECT sName, sCountry, firstLesson " +
                     "FROM Student " +
                     "ORDER BY sName";
-                OleDbDataReader reader = command.ExecuteReader();
+                MySqlDataReader reader = command.ExecuteReader();
 
                 string[] row;
 

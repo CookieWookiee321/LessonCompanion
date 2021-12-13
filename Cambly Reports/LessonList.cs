@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using MySql.Data.MySqlClient;
 
 
 namespace Cambly_Reports
 {
     public partial class LessonList : Form
     {
-        string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=../../../cambly.accdb; Persist Security Info=False";
-        OleDbConnection conn;
+        string connectionString = "server=localhost;user id=root;database=cambly;password=W3dn35d33y5#;persistsecurityinfo=True";
+        MySqlConnection conn;
 
         public Dictionary<int, string> allStudents;
         Dictionary<string, int> allStudentsInverse;
@@ -25,7 +26,7 @@ namespace Cambly_Reports
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            conn = new OleDbConnection();
+            conn = new MySqlConnection();
             conn.ConnectionString = connectionString;
             conn.Open();
 
@@ -55,9 +56,9 @@ namespace Cambly_Reports
 
             thisStudentID = allStudentsInverse[$"{lbStudentList.SelectedItem.ToString()}"]; //gets the stuID associated
                                                                                             //with the selected name
-            OleDbCommand cmdFetch = conn.CreateCommand();
+            MySqlCommand cmdFetch = conn.CreateCommand();
             cmdFetch.CommandText = $"SELECT lDate, lTopic FROM Lesson WHERE lStudent = {thisStudentID} ORDER BY lDate Desc";
-            OleDbDataReader reader = cmdFetch.ExecuteReader();
+            MySqlDataReader reader = cmdFetch.ExecuteReader();
 
             if (reader != null && reader.HasRows)
             {
@@ -69,6 +70,7 @@ namespace Cambly_Reports
                     row = new string[] { $"{lo}", $"{(string)reader["lTopic"]}" };
                     dgvTopicList.Rows.Add(row);
                 }
+                reader.Close();
             }
 
             lblLessonCount.Text = $"Total lesson count: {dgvTopicList.Rows.Count}";
@@ -79,9 +81,9 @@ namespace Cambly_Reports
         {
             try //Populating allStudents ArrayList
             {
-                OleDbCommand cmd = conn.CreateCommand();
+                MySqlCommand cmd = conn.CreateCommand();
                 cmd.CommandText = "SELECT stuID, sName FROM Student ORDER BY sName";
-                OleDbDataReader reader = cmd.ExecuteReader();
+                MySqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader != null && reader.HasRows)
                 {
@@ -90,6 +92,7 @@ namespace Cambly_Reports
                         allStudents.Add((int)reader["stuID"], (string)reader["sName"]);
                         allStudentsInverse.Add((string)reader["sName"], (int)reader["stuID"]);
                     }
+                    reader.Close();
                 }
             }
             catch (Exception ex)
@@ -101,12 +104,16 @@ namespace Cambly_Reports
             {
                 bool isUnique = true;
 
-                OleDbCommand cmd2 = conn.CreateCommand();
-                cmd2.CommandText = "SELECT DISTINCT TOP 10 Student.stuID, Student.sName, Lesson.lDate, Lesson.lStudent " +
-                                    "FROM Lesson INNER JOIN Student " +
-                                        "ON Student.stuID = Lesson.lStudent " +
-                                    "ORDER BY lDATE DESC";
-                OleDbDataReader reader2 = cmd2.ExecuteReader();
+                MySqlCommand cmd2 = conn.CreateCommand();
+                cmd2.CommandText = 
+                    $"SELECT DISTINCT lesson.lessID, lesson.lDate, " +
+                        $"lesson.lTopic, student.stuID, student.sName " +
+                    $"FROM     lesson, student " +
+                    $"WHERE  lesson.lStudent = student.stuID " +
+                    $"ORDER BY lDate DESC " +
+                    $"LIMIT 20;"; 
+
+                MySqlDataReader reader2 = cmd2.ExecuteReader();
 
                 if (reader2 != null && reader2.HasRows)
                 {
@@ -128,6 +135,8 @@ namespace Cambly_Reports
 
                         isUnique = true;                                    //isUnique is set back to true for the next loop
                     }
+
+                    reader2.Close();
                 }
             }
             catch (Exception ex)
@@ -178,11 +187,18 @@ namespace Cambly_Reports
 
                     string[] row;
 
-                    thisStudentID = allStudentsInverse[$"{lbStudentList.SelectedItem.ToString()}"]; //gets the stuID associated
-                                                                                                    //with the selected name
-                    OleDbCommand cmdFetch = conn.CreateCommand();
-                    cmdFetch.CommandText = $"SELECT lDate, lTopic FROM Lesson WHERE lStudent = {thisStudentID} AND lTopic like '%{tbSearch.Text}%' ORDER BY lDate Desc";
-                    OleDbDataReader reader = cmdFetch.ExecuteReader();
+                    thisStudentID = allStudentsInverse[$"{lbStudentList.SelectedItem}"];    //gets the stuID associated
+                                                                                            //with the selected name
+                    MySqlCommand cmdFetch = conn.CreateCommand();
+
+                    cmdFetch.CommandText = 
+                        $"SELECT lDate, lTopic " +
+                        $"FROM Lesson " +
+                        $"WHERE lStudent = {thisStudentID} " +
+                            $"AND lTopic LIKE '%{tbSearch.Text}%' " +
+                        $"ORDER BY lDate Desc";
+                    
+                    MySqlDataReader reader = cmdFetch.ExecuteReader();
 
                     if (reader != null && reader.HasRows)
                     {
@@ -194,6 +210,7 @@ namespace Cambly_Reports
                             row = new string[] { $"{lo}", $"{(string)reader["lTopic"]}" };
                             dgvTopicList.Rows.Add(row);
                         }
+                        reader.Close();
                     }
 
                     lblLessonCount.Text = $"Total lesson count: {dgvTopicList.Rows.Count}";
@@ -206,9 +223,9 @@ namespace Cambly_Reports
 
                     thisStudentID = allStudentsInverse[$"{lbStudentList.SelectedItem.ToString()}"]; //gets the stuID associated
                                                                                                     //with the selected name
-                    OleDbCommand cmdFetch = conn.CreateCommand();
+                    MySqlCommand cmdFetch = conn.CreateCommand();
                     cmdFetch.CommandText = $"SELECT lDate, lTopic FROM Lesson WHERE lStudent = {thisStudentID} ORDER BY lDate Desc";
-                    OleDbDataReader reader = cmdFetch.ExecuteReader();
+                    MySqlDataReader reader = cmdFetch.ExecuteReader();
 
                     if (reader != null && reader.HasRows)
                     {
@@ -220,6 +237,7 @@ namespace Cambly_Reports
                             row = new string[] { $"{lo}", $"{(string)reader["lTopic"]}" };
                             dgvTopicList.Rows.Add(row);
                         }
+                        reader.Close();
                     }
 
                     lblLessonCount.Text = $"Total lesson count: {dgvTopicList.Rows.Count}";

@@ -71,6 +71,7 @@ namespace Cambly_Reports
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Name = "StudentNotes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentNotes";
             this.Load += new System.EventHandler(this.StudentNotes_Load);
             this.ResumeLayout(false);

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using MySql.Data.MySqlClient;
 
 namespace Cambly_Reports
 {
@@ -17,16 +18,18 @@ namespace Cambly_Reports
         Document document = new Document();
         string reportOuput;
 
-        string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source = ../../../cambly.accdb; Persist Security Info=False";
-        public static OleDbConnection conn;
+        string connectionString = "server=localhost;user id=root;database=cambly;password=W3dn35d33y5#;persistsecurityinfo=True";
+        public static MySqlConnection conn;
 
         bool onlyRecent = false;
+        public static string studentName = "";
 
         public ReportCreator()
         {
             InitializeComponent();
 
-            this.Location = new Point(
+            this.Location = new Point
+                (
                 Screen.PrimaryScreen.WorkingArea.Width - this.Width,
                 Screen.PrimaryScreen.WorkingArea.Height - this.Height
                 );
@@ -38,10 +41,12 @@ namespace Cambly_Reports
             set { studentArrayList.Add(value); }
         }
 
-        #region EVENT_HANDLERS
+        //EVENT HANDLERS---------------------------------------------------------------------------------
+
         private void ReportCreator_Load(object sender, EventArgs e) {
-            try {
-                conn = new OleDbConnection();
+            try 
+            {
+                conn = new MySqlConnection();
                 conn.ConnectionString = connectionString;
                 conn.Open();
 
@@ -53,17 +58,20 @@ namespace Cambly_Reports
 
                 cmbxStudentName.Select();
             }
-            catch (Exception ex) {
+            catch (Exception ex) 
+            {
                 MessageBox.Show("ERROR connecting to database... " + ex);
                 Application.Exit();
             }
         } //form loaded
 
-        private void ReportCreator_FormClosed(object sender, FormClosedEventArgs e) {
+        private void ReportCreator_FormClosed(object sender, FormClosedEventArgs e) 
+        {
             conn.Close();
         } //form closed
 
-        private void txbxDate_Click(object sender, EventArgs e) {
+        private void txbxDate_Click(object sender, EventArgs e) 
+        {
             calDate.Visible = true;
         } //Date textbox clicked
 
@@ -84,8 +92,6 @@ namespace Cambly_Reports
                 MessageBox.Show(ex.Message, "Error Closing Connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
 
         private void studentListToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -153,7 +159,7 @@ namespace Cambly_Reports
             int stuID = FindStuID(cmbxStudentName.Text);
 
             string lessonInfo = "INSERT INTO Lesson (lDate, lTopic, lStudent)" +
-                                            $"VALUES ('{txbxDate.Text}', '{txbxTopic.Text}', {stuID})";
+                                $"VALUES ('{txbxDate.Text}', '{txbxTopic.Text}', {stuID})";
 
             if (txbxTopic.Text.Length > 0 | txbxDate.Text.Length > 0 | cmbxStudentName.Text.Length > 0)
             {
@@ -161,13 +167,13 @@ namespace Cambly_Reports
                 {
                     try
                     {
-                        OleDbCommand cmd = conn.CreateCommand();
+                        MySqlCommand cmd = conn.CreateCommand();
                         cmd.CommandText = lessonInfo;
                         cmd.ExecuteNonQuery();
 
                         txbxTopic.Clear();
                         txbxDate.Clear();
-                        cmbxStudentName.SelectedIndex = -1;
+                        cmbxStudentName.Text = "";
                         rtxbxVocab.Clear();
                         rtxbxGrammar.Clear();
 
@@ -304,12 +310,35 @@ namespace Cambly_Reports
             //calDate.Visible = false;
         }
 
-            #endregion
-
-
         #endregion
 
-        #region FUNCTIONS
+        private void tsmiSaveLoc_Click(object sender, EventArgs e)
+        {
+            diaSave.ShowDialog();
+        }
+
+        private void cmbxStudentName_Leave(object sender, EventArgs e)
+        {
+            if (
+                cmbxStudentName.Text.Length > 0
+                && Char.IsLower(cmbxStudentName.Text[0])
+                )
+            {
+                StringBuilder sb = new StringBuilder();
+
+                sb.Append(cmbxStudentName.Text);
+                sb[0] = Char.ToUpper(sb[0]);
+
+                cmbxStudentName.Text = sb.ToString();
+            }
+        }
+
+        private void studentNotesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new StudentNotes().Show();
+        }
+
+        //METHODS--------------------------------------------------------------------------------------
 
         private void GetSaveLocation()
         {
@@ -317,20 +346,21 @@ namespace Cambly_Reports
                 $"SELECT SaveDir, TemplateFilename " +
                 $"FROM Saves;";
 
-            OleDbDataReader reader = new OleDbCommand(query, conn).ExecuteReader();
+            MySqlDataReader reader = new MySqlCommand(query, conn).ExecuteReader();
 
             while (reader.Read())
             {
                 reportOuput = $"{(string)reader["SaveDir"]}{(string)reader["TemplateFilename"]}";
             }
+            reader.Close();
         }
 
         public int FindStuID(string studentName)
         {
             int returnValue = -1;
-            OleDbCommand cmd = conn.CreateCommand();
+            MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandText = $"SELECT stuID FROM Student WHERE sName = '{studentName}'";
-            OleDbDataReader dbRead = cmd.ExecuteReader();
+            MySqlDataReader dbRead = cmd.ExecuteReader();
 
             if (dbRead != null && dbRead.HasRows)
             {
@@ -338,22 +368,27 @@ namespace Cambly_Reports
                 {
                     returnValue = (int)dbRead["stuID"];
                 }
+                dbRead.Close();
+
                 return returnValue;
             }
             else 
             {
+                dbRead.Close();
+
                 return returnValue;
             }
         }
 
         public void RefreshComboBox()
         {
-            OleDbCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "SELECT DISTINCT TOP 10 Student.stuID, Student.sName, Lesson.lDate, Lesson.lStudent " +
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT DISTINCT Student.stuID, Student.sName, Lesson.lDate, Lesson.lStudent " +
                     "FROM Lesson INNER JOIN Student " +
                         "ON Student.stuID = Lesson.lStudent " +
-                    "ORDER BY lDATE DESC";
-            OleDbDataReader read = cmd.ExecuteReader();
+                    "ORDER BY lDATE DESC " +
+                    "LIMIT 10;";
+            MySqlDataReader read = cmd.ExecuteReader();
 
             if (read != null && read.HasRows)
             {
@@ -364,6 +399,8 @@ namespace Cambly_Reports
                         cmbxStudentName.Items.Add((string)read["sName"]);
                     }
                 }
+
+                read.Close();
             }
             
         }
@@ -412,11 +449,11 @@ namespace Cambly_Reports
             }
         }
 
-        public static void InitializeAutocomplete(OleDbConnection connection, ComboBox control)
+        public static void InitializeAutocomplete(MySqlConnection connection, ComboBox control)
         {
-            OleDbCommand cmd = connection.CreateCommand();
+            MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandText = "SELECT stuID, sName FROM Student ORDER BY sName";
-            OleDbDataReader reader = cmd.ExecuteReader();
+            MySqlDataReader reader = cmd.ExecuteReader();
 
             if (reader != null && reader.HasRows)
             {
@@ -424,40 +461,48 @@ namespace Cambly_Reports
                 {
                     studentsList.Add((string)reader["sName"]);
                 }
+
+                reader.Close();
             }
 
             var source = new AutoCompleteStringCollection();
             source.AddRange(studentsList.ToArray());
 
             control.AutoCompleteCustomSource = source;
+            
             control.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             control.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
         }
 
-        #endregion
-
-        private void tsmiSaveLoc_Click(object sender, EventArgs e)
+        private int GetLessonID()
         {
-            diaSave.ShowDialog();
-        }
+            int returnMe = 0;
 
-        private void cmbxStudentName_Leave(object sender, EventArgs e)
-        {
-            if (cmbxStudentName.SelectedItem != null 
-                    && Char.IsLower(cmbxStudentName.Text[0]))
+            string x = 
+                $"SELECT lessID " +
+                $"FROM lesson " +
+                $"ORDER BY lessID DESC;";
+
+            MySqlDataReader r = new MySqlCommand(x, conn).ExecuteReader();
+
+            while (r.Read())
             {
-                StringBuilder sb = new StringBuilder();
-
-                sb.Append(cmbxStudentName.Text);
-                sb[0] = Char.ToUpper(sb[0]);
-
-                cmbxStudentName.Text = sb.ToString();
+                returnMe = ((int)r[0] + 1);
             }
+            r.Close();
+
+            return returnMe;
         }
 
-        private void studentNotesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cmbxStudentName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            new StudentNotes().Show();
+            studentName = cmbxStudentName.Text;
+        }
+
+        private void cmbxStudentName_TextChanged(object sender, EventArgs e)
+        {
+            studentName = cmbxStudentName.Text;
         }
     }
 }
