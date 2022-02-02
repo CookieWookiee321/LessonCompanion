@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Data.OleDb;
-using MySql.Data.MySqlClient;
+using System.Data.SQLite;
+using System.Text;
 
 namespace Cambly_Reports
 {
     public partial class childNewStudent : Form
     {
         string connectionString = "server=localhost;user id=root;database=cambly;password=W3dn35d33y5#;persistsecurityinfo=True";
-        MySqlConnection conn;
+        SQLiteConnection conn = ReportCreator.conn;
 
         public childNewStudent()
         {
@@ -17,9 +17,10 @@ namespace Cambly_Reports
 
         private void childNewStudent_Load(object sender, EventArgs e)
         {
-            conn = new MySqlConnection();               //connect to DB on load
-            conn.ConnectionString = connectionString;
-            conn.Open();
+            if (conn.State == System.Data.ConnectionState.Closed)
+            {
+                conn.Open();
+            }
 
             tbTopic.Text = "Intro";
         }
@@ -27,22 +28,45 @@ namespace Cambly_Reports
         public int FindStuID(string studentName)
         {
             int returnValue = -1;
-            MySqlCommand cmd = conn.CreateCommand();
+            SQLiteCommand cmd = conn.CreateCommand();
             cmd.CommandText = $"SELECT stuID FROM Student WHERE sName = '{studentName}'";
-            MySqlDataReader dbRead = cmd.ExecuteReader();
+            SQLiteDataReader dbRead = cmd.ExecuteReader();
 
-            if (dbRead != null && dbRead.HasRows)
+            if (dbRead.HasRows)
             {
                 while (dbRead.Read())
                 {
                     returnValue = (int)dbRead["stuID"];
                 }
+                dbRead.Close();
                 return returnValue;
             }
             else
             {
+                dbRead.Close();
                 return returnValue;
             }
+        }
+
+        private int NewStuID()
+        {
+            string x = 
+                $"SELECT stuID " +
+                $"FROM student " +
+                $"ORDER BY stuID DESC " +
+                $"LIMIT 1;";
+
+            SQLiteDataReader r = new SQLiteCommand(x, conn).ExecuteReader();
+
+            int ret = -1;
+
+            while (r.Read())
+            {
+                ret = (int)r[0] + 1;
+            }
+
+            r.Close();
+            return ret;
         }
 
         private void btnCAdd_Click(object sender, EventArgs e)
@@ -58,15 +82,35 @@ namespace Cambly_Reports
                     name = tbxCName.Text + " " + counter;
                 }
 
-                MySqlCommand cmd = conn.CreateCommand();        //add new student to DB
-                cmd.CommandText = "INSERT INTO Student(sName, sCountry, firstLesson)" +
-                                    $"VALUES ('{name}', '{tbxCCountry.Text}', '{tbxCFirstLesson.Text}')";
+                int stuID = NewStuID();
+
+                StringBuilder sb = new StringBuilder();
+                sb.Append(tbxCFirstLesson.Text);
+                sb = sb.Replace('/', '-');
+                sb.Append(" 00:00:00");
+                string correctDateTime = sb.ToString();
+
+                SQLiteCommand cmd = conn.CreateCommand();        //add new student to DB
+                cmd.CommandText = "INSERT INTO Student(stuID, sName, sNationality, firstLesson)" +
+                                    $"VALUES (@id, @name, @country, @first)";
+                SQLiteParameter[] param = new SQLiteParameter[4];
+                param[0] = new SQLiteParameter("@id", stuID);
+                param[1] = new SQLiteParameter("@name", name);
+                param[2] = new SQLiteParameter("@country", tbxCCountry.Text);
+                param[3] = new SQLiteParameter("@first", correctDateTime);
+                cmd.Parameters.AddRange(param);
+
                 cmd.ExecuteNonQuery();
 
-                int stuID = FindStuID(name);
-
                 cmd.CommandText = "INSERT INTO Lesson (lDate, lTopic, lStudent)" +
-                                            $"VALUES ('{tbxCFirstLesson.Text}', '{tbTopic.Text}', {stuID})";
+                                    $"VALUES (@date, @topic, @id)";
+                param = new SQLiteParameter[3];
+                param[0] = new SQLiteParameter("@date", correctDateTime);
+                param[1] = new SQLiteParameter("@topic", tbTopic.Text);
+                param[2] = new SQLiteParameter("@id", stuID);
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddRange(param);
+
                 cmd.ExecuteNonQuery();
 
                 this.Close();

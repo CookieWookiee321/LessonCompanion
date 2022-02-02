@@ -2,22 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using System.Data.OleDb;
-using MySql.Data.MySqlClient;
+using System.Data.SQLite;
 
 
 namespace Cambly_Reports
 {
     public partial class LessonList : Form
     {
-        string connectionString = "server=localhost;user id=root;database=cambly;password=W3dn35d33y5#;persistsecurityinfo=True";
-        MySqlConnection conn;
+        SQLiteConnection conn = ReportCreator.conn;
 
         public Dictionary<int, string> allStudents;
         Dictionary<string, int> allStudentsInverse;
         Dictionary<int, string> recentStudents;
-
-        int thisStudentID;
+        Dictionary<string, string[][]> AllLessonsAllStudents = new Dictionary<string, string[][]>();
 
         public LessonList()
         {
@@ -26,10 +23,6 @@ namespace Cambly_Reports
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            conn = new MySqlConnection();
-            conn.ConnectionString = connectionString;
-            conn.Open();
-
             allStudents = new Dictionary<int, string>();
             allStudentsInverse = new Dictionary<string, int>();
             recentStudents = new Dictionary<int, string>();
@@ -37,6 +30,8 @@ namespace Cambly_Reports
             DataGridViewSetUp();
 
             PopulateDictionaries();
+
+            LoadAllLessons();
 
             chbRecent.CheckState = CheckState.Checked;
         }
@@ -51,39 +46,88 @@ namespace Cambly_Reports
         private void lbStudentList_SelectedIndexChanged(object sender, EventArgs e)
         {
             dgvTopicList.Rows.Clear();
+            AllResults();
+        }
 
-            string[] row;
 
-            thisStudentID = allStudentsInverse[$"{lbStudentList.SelectedItem.ToString()}"]; //gets the stuID associated
-                                                                                            //with the selected name
-            MySqlCommand cmdFetch = conn.CreateCommand();
-            cmdFetch.CommandText = $"SELECT lDate, lTopic FROM Lesson WHERE lStudent = {thisStudentID} ORDER BY lDate Desc";
-            MySqlDataReader reader = cmdFetch.ExecuteReader();
+        private void chbRecent_CheckedChanged(object sender, EventArgs e)
+        {
+            PopulateStudentLists();
+        }
 
-            if (reader != null && reader.HasRows)
+        private void tbSearch_Click(object sender, EventArgs e)
+        {
+            tbSearch.Text = "";
+        }
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            //in case name is not selected when search bar is used
+            try
             {
-                while (reader.Read())
+                if (tbSearch.Text.Length > 0)
                 {
-                    DateTime hi = (DateTime)reader["lDate"];
-                    string lo = hi.ToString("yyyy/MM/dd");
+                    List<string[]> newResults = new List<string[]>();
 
-                    row = new string[] { $"{lo}", $"{(string)reader["lTopic"]}" };
-                    dgvTopicList.Rows.Add(row);
+                    //Loop through each row in the present results
+                    foreach(DataGridViewRow row in dgvTopicList.Rows)
+                    {
+                        //If the topic matches any part of the search term...
+                        //(converted to uppercase)
+                        if (row.Cells[1].Value.ToString().ToUpper().Contains(tbSearch.Text.ToUpper()))
+                        {
+                            //... add the row to the newResults List
+                            newResults.Add(new string[] { row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString() });
+                        }
+                    }
+                    dgvTopicList.Rows.Clear();
+
+                    //Add the rows in newResults to the datagridview
+                    //Final search results
+                    foreach (string[] row in newResults)
+                    {
+                        dgvTopicList.Rows.Add(row);
+                    }
                 }
-                reader.Close();
+                else if (tbSearch.Text.Length == 0)
+                {
+                    dgvTopicList.Rows.Clear();
+                    AllResults();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Close();
+        }
+
+        //--------------------------------------------------------------------------------------------------
+        private void AllResults()
+        {
+            string stuName = lbStudentList.SelectedItem.ToString();
+
+            foreach (string[] row in AllLessonsAllStudents[stuName])
+            {
+                dgvTopicList.Rows.Add(row);
             }
 
             lblLessonCount.Text = $"Total lesson count: {dgvTopicList.Rows.Count}";
         }
-
-        //--------------------------------------------------------------------------------------------------
+        
         private void PopulateDictionaries()
         {
             try //Populating allStudents ArrayList
             {
-                MySqlCommand cmd = conn.CreateCommand();
+                SQLiteCommand cmd = conn.CreateCommand();
                 cmd.CommandText = "SELECT stuID, sName FROM Student ORDER BY sName";
-                MySqlDataReader reader = cmd.ExecuteReader();
+                conn.Open();
+
+                SQLiteDataReader reader = cmd.ExecuteReader();
 
                 if (reader != null && reader.HasRows)
                 {
@@ -94,6 +138,8 @@ namespace Cambly_Reports
                     }
                     reader.Close();
                 }
+
+                conn.Close();
             }
             catch (Exception ex)
             {
@@ -104,16 +150,15 @@ namespace Cambly_Reports
             {
                 bool isUnique = true;
 
-                MySqlCommand cmd2 = conn.CreateCommand();
+                SQLiteCommand cmd2 = conn.CreateCommand();
                 cmd2.CommandText = 
-                    $"SELECT DISTINCT lesson.lessID, lesson.lDate, " +
-                        $"lesson.lTopic, student.stuID, student.sName " +
+                    $"SELECT DISTINCT lesson.lDate, lesson.lTopic, student.stuID, student.sName " +
                     $"FROM     lesson, student " +
                     $"WHERE  lesson.lStudent = student.stuID " +
                     $"ORDER BY lDate DESC " +
-                    $"LIMIT 20;"; 
-
-                MySqlDataReader reader2 = cmd2.ExecuteReader();
+                    $"LIMIT 20;";
+                conn.Open();
+                SQLiteDataReader reader2 = cmd2.ExecuteReader();
 
                 if (reader2 != null && reader2.HasRows)
                 {
@@ -138,6 +183,7 @@ namespace Cambly_Reports
 
                     reader2.Close();
                 }
+                conn.Close();
             }
             catch (Exception ex)
             {
@@ -166,92 +212,82 @@ namespace Cambly_Reports
             dgvTopicList.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
-        private void chbRecent_CheckedChanged(object sender, EventArgs e)
+        private void LoadAllLessons()
         {
-            PopulateStudentLists();
-        }
-
-        private void tbSearch_Click(object sender, EventArgs e)
-        {
-            tbSearch.Text = "";
-        }
-
-        private void tbSearch_TextChanged(object sender, EventArgs e)
-        {
-            //in case name is not selected when search bar is used
             try
             {
-                if (tbSearch.Text.Length > 0)
+                if (conn.State == System.Data.ConnectionState.Closed)
                 {
-                    dgvTopicList.Rows.Clear();
+                    conn.Open();
+                }
 
-                    string[] row;
+                List<string[]> lessons;
+                string queryLessons =
+                    $"SELECT lDate, lTopic " +
+                    $"FROM lesson JOIN student " +
+                        $"ON student.stuID = lesson.lStudent " +
+                    $"WHERE sName = @name " +
+                    $"ORDER BY lDate DESC;";
 
-                    thisStudentID = allStudentsInverse[$"{lbStudentList.SelectedItem}"];    //gets the stuID associated
-                                                                                            //with the selected name
-                    MySqlCommand cmdFetch = conn.CreateCommand();
+                //Loop through every student
+                foreach (string student in allStudents.Values)
+                {
+                    SQLiteCommand command = new SQLiteCommand(queryLessons, conn);
+                    command.Parameters.Add(new SQLiteParameter("@name", student));
+                    SQLiteDataReader r = command.ExecuteReader();
+                    lessons = new List<string[]>();
 
-                    cmdFetch.CommandText = 
-                        $"SELECT lDate, lTopic " +
-                        $"FROM Lesson " +
-                        $"WHERE lStudent = {thisStudentID} " +
-                            $"AND lTopic LIKE '%{tbSearch.Text}%' " +
-                        $"ORDER BY lDate Desc";
-                    
-                    MySqlDataReader reader = cmdFetch.ExecuteReader();
-
-                    if (reader != null && reader.HasRows)
+                    //Add each lesson by the student to the List
+                    while (r.Read())
                     {
-                        while (reader.Read())
+                        if (IsDateTime(r))
                         {
-                            DateTime hi = (DateTime)reader["lDate"];
+                            DateTime hi = (DateTime)r["lDate"];
                             string lo = hi.ToString("yyyy/MM/dd");
 
-                            row = new string[] { $"{lo}", $"{(string)reader["lTopic"]}" };
-                            dgvTopicList.Rows.Add(row);
+                            lessons.Add(new string[] { $"{lo}", $"{(string)r["lTopic"]}" });
                         }
-                        reader.Close();
-                    }
-
-                    lblLessonCount.Text = $"Total lesson count: {dgvTopicList.Rows.Count}";
-                }
-                else if (tbSearch.Text.Length == 0)
-                {
-                    dgvTopicList.Rows.Clear();
-
-                    string[] row;
-
-                    thisStudentID = allStudentsInverse[$"{lbStudentList.SelectedItem.ToString()}"]; //gets the stuID associated
-                                                                                                    //with the selected name
-                    MySqlCommand cmdFetch = conn.CreateCommand();
-                    cmdFetch.CommandText = $"SELECT lDate, lTopic FROM Lesson WHERE lStudent = {thisStudentID} ORDER BY lDate Desc";
-                    MySqlDataReader reader = cmdFetch.ExecuteReader();
-
-                    if (reader != null && reader.HasRows)
-                    {
-                        while (reader.Read())
+                        else
                         {
-                            DateTime hi = (DateTime)reader["lDate"];
-                            string lo = hi.ToString("yyyy/MM/dd");
+                            string lo = (string)r["lDate"];
 
-                            row = new string[] { $"{lo}", $"{(string)reader["lTopic"]}" };
-                            dgvTopicList.Rows.Add(row);
+                            lessons.Add(new string[] { $"{lo}", $"{(string)r["lTopic"]}" });
                         }
-                        reader.Close();
                     }
-
-                    lblLessonCount.Text = $"Total lesson count: {dgvTopicList.Rows.Count}";
+                    r.Close();
+                    //Add the List to the Dictionary
+                    AllLessonsAllStudents.Add(student, lessons.ToArray());
                 }
+
+                conn.Close();
             }
-            catch (Exception ex)
+            catch (SQLiteException ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show
+                    (
+                        ex.Message,
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+
+                this.Dispose();
             }
         }
 
-        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        private bool IsDateTime(SQLiteDataReader reader)
         {
-            conn.Close();
+            try
+            {
+                DateTime date = (DateTime)reader["lDate"];
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
+
     }
 }

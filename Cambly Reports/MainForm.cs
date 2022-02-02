@@ -2,12 +2,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data.OleDb;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
-using MySql.Data.MySqlClient;
+using System.Data.SQLite;
 
 namespace Cambly_Reports
 {
@@ -18,8 +17,8 @@ namespace Cambly_Reports
         Document document = new Document();
         string reportOuput;
 
-        string connectionString = "server=localhost;user id=root;database=cambly;password=W3dn35d33y5#;persistsecurityinfo=True";
-        public static MySqlConnection conn;
+        string connectionString = "Data Source=cambly.sqlite;Version=3;";
+        public static SQLiteConnection conn;
 
         bool onlyRecent = false;
         public static string studentName = "";
@@ -43,12 +42,17 @@ namespace Cambly_Reports
 
         //EVENT HANDLERS---------------------------------------------------------------------------------
 
-        private void ReportCreator_Load(object sender, EventArgs e) {
+        private void ReportCreator_Load(object sender, EventArgs e) 
+        {
+            if (!File.Exists("cambly.sqlite"))
+            {
+                CreateDatabase();
+            }
+            
             try 
             {
-                conn = new MySqlConnection();
+                conn = new SQLiteConnection();
                 conn.ConnectionString = connectionString;
-                conn.Open();
 
                 RefreshComboBox();
 
@@ -57,6 +61,9 @@ namespace Cambly_Reports
                 InitializeAutocomplete(conn, cmbxStudentName);
 
                 cmbxStudentName.Select();
+
+                tsmiAlwaysTop.Checked = true;
+                this.TopMost = true;
             }
             catch (Exception ex) 
             {
@@ -156,10 +163,18 @@ namespace Cambly_Reports
             }
 
             //Add lesson to DB
+            conn.Open();
+
             int stuID = FindStuID(cmbxStudentName.Text);
 
+            StringBuilder sb = new StringBuilder();
+            sb.Append(txbxDate.Text);
+            sb = sb.Replace('/', '-');
+            sb.Append(" 00:00:00");
+            string correctDateTime = sb.ToString();
+
             string lessonInfo = "INSERT INTO Lesson (lDate, lTopic, lStudent)" +
-                                $"VALUES ('{txbxDate.Text}', '{txbxTopic.Text}', {stuID})";
+                                $"VALUES ('{correctDateTime}', '{txbxTopic.Text}', {stuID})";
 
             if (txbxTopic.Text.Length > 0 | txbxDate.Text.Length > 0 | cmbxStudentName.Text.Length > 0)
             {
@@ -167,9 +182,11 @@ namespace Cambly_Reports
                 {
                     try
                     {
-                        MySqlCommand cmd = conn.CreateCommand();
+                        SQLiteCommand cmd = conn.CreateCommand();
                         cmd.CommandText = lessonInfo;
                         cmd.ExecuteNonQuery();
+
+                        conn.Close();
 
                         txbxTopic.Clear();
                         txbxDate.Clear();
@@ -182,16 +199,19 @@ namespace Cambly_Reports
                     catch (Exception ex)
                     {
                         MessageBox.Show("ERROR adding the lesson to the database... " + ex.Message);
+                        conn.Close();
                     }
                 }
                 else
                 {
                     MessageBox.Show("This learner's name is spelled wrong, or else has not been added to the database yet.");
+                    conn.Close();
                 }
             }
             else
             {
                 MessageBox.Show("Enter values for a name, topic, and date.");
+                conn.Close();
             }
         } //export to Word document + add lesson to database
 
@@ -346,21 +366,24 @@ namespace Cambly_Reports
                 $"SELECT SaveDir, TemplateFilename " +
                 $"FROM Saves;";
 
-            MySqlDataReader reader = new MySqlCommand(query, conn).ExecuteReader();
+            conn.Open();
+
+            SQLiteDataReader reader = new SQLiteCommand(query, conn).ExecuteReader();
 
             while (reader.Read())
             {
                 reportOuput = $"{(string)reader["SaveDir"]}{(string)reader["TemplateFilename"]}";
             }
             reader.Close();
+            conn.Close();
         }
 
         public int FindStuID(string studentName)
         {
             int returnValue = -1;
-            MySqlCommand cmd = conn.CreateCommand();
+            SQLiteCommand cmd = conn.CreateCommand();
             cmd.CommandText = $"SELECT stuID FROM Student WHERE sName = '{studentName}'";
-            MySqlDataReader dbRead = cmd.ExecuteReader();
+            SQLiteDataReader dbRead = cmd.ExecuteReader();
 
             if (dbRead != null && dbRead.HasRows)
             {
@@ -382,13 +405,14 @@ namespace Cambly_Reports
 
         public void RefreshComboBox()
         {
-            MySqlCommand cmd = conn.CreateCommand();
+            SQLiteCommand cmd = conn.CreateCommand();
             cmd.CommandText = "SELECT DISTINCT Student.stuID, Student.sName, Lesson.lDate, Lesson.lStudent " +
                     "FROM Lesson INNER JOIN Student " +
                         "ON Student.stuID = Lesson.lStudent " +
                     "ORDER BY lDATE DESC " +
                     "LIMIT 10;";
-            MySqlDataReader read = cmd.ExecuteReader();
+            conn.Open();
+            SQLiteDataReader read = cmd.ExecuteReader();
 
             if (read != null && read.HasRows)
             {
@@ -402,6 +426,7 @@ namespace Cambly_Reports
 
                 read.Close();
             }
+            conn.Close();
             
         }
 
@@ -449,11 +474,12 @@ namespace Cambly_Reports
             }
         }
 
-        public static void InitializeAutocomplete(MySqlConnection connection, ComboBox control)
+        public static void InitializeAutocomplete(SQLiteConnection connection, ComboBox control)
         {
-            MySqlCommand cmd = connection.CreateCommand();
+            SQLiteCommand cmd = connection.CreateCommand();
             cmd.CommandText = "SELECT stuID, sName FROM Student ORDER BY sName";
-            MySqlDataReader reader = cmd.ExecuteReader();
+            conn.Open();
+            SQLiteDataReader reader = cmd.ExecuteReader();
 
             if (reader != null && reader.HasRows)
             {
@@ -464,7 +490,7 @@ namespace Cambly_Reports
 
                 reader.Close();
             }
-
+            conn.Close();
             var source = new AutoCompleteStringCollection();
             source.AddRange(studentsList.ToArray());
 
@@ -475,26 +501,6 @@ namespace Cambly_Reports
 
         }
 
-        private int GetLessonID()
-        {
-            int returnMe = 0;
-
-            string x = 
-                $"SELECT lessID " +
-                $"FROM lesson " +
-                $"ORDER BY lessID DESC;";
-
-            MySqlDataReader r = new MySqlCommand(x, conn).ExecuteReader();
-
-            while (r.Read())
-            {
-                returnMe = ((int)r[0] + 1);
-            }
-            r.Close();
-
-            return returnMe;
-        }
-
         private void cmbxStudentName_SelectedIndexChanged(object sender, EventArgs e)
         {
             studentName = cmbxStudentName.Text;
@@ -503,6 +509,91 @@ namespace Cambly_Reports
         private void cmbxStudentName_TextChanged(object sender, EventArgs e)
         {
             studentName = cmbxStudentName.Text;
+        }
+
+        private void stcbAlwaysTop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmiAlwaysTop_Click(object sender, EventArgs e)
+        {
+            if (tsmiAlwaysTop.Checked == true)
+            {
+                tsmiAlwaysTop.Checked = false;
+                this.TopMost = false;
+            }
+            else
+            {
+                tsmiAlwaysTop.Checked = true;
+                this.TopMost = true;
+            }
+        }
+
+        private void CreateDatabase()
+        {
+            SQLiteConnection.CreateFile("cambly.sqlite");
+            conn = new SQLiteConnection(connectionString);
+            conn.Open();
+
+            //Student
+            string createTableStudent =
+                "CREATE TABLE student (" +
+                    "stuID INT NOT NULL PRIMARY KEY, " +
+                    "sName VARCHAR(50) NOT NULL, " +
+                    "sNationality VARCHAR(100) NOT NULL, " +
+                    "firstLesson DATETIME NOT NULL, " +
+                    "notes VARCHAR(255)" +
+                "); ";
+            SQLiteCommand tStudent = new SQLiteCommand(createTableStudent, conn);
+            using (tStudent)
+            {
+                tStudent.ExecuteNonQuery();
+            }
+
+            //tLessons
+            string createTableLesson =
+                "CREATE TABLE lesson (" +
+                    "lDate DATETIME NOT NULL, " +
+                    "lTopic VARCHAR(255) NOT NULL, " +
+                    "lStudent INT NOT NULL, " +
+                    "PRIMARY KEY (lDate, lStudent)" +
+                "); ";
+            using (SQLiteCommand tLesson = new SQLiteCommand(createTableLesson, conn))
+            {
+                tLesson.ExecuteNonQuery();
+            }
+
+            //tSaves
+            string createTableSaves = "CREATE TABLE saves (" +
+                    "SaveDir VARCHAR(255), " +
+                    "TemplateFilename VARCHAR(255)" +
+                ");";
+           using (SQLiteCommand tSaves = new SQLiteCommand(createTableSaves, conn))
+            {
+                tSaves.ExecuteNonQuery();
+            }
+
+           //insert
+            string insert = "INSERT INTO saves (SaveDir, TemplateFilename) " + 
+                    "VALUES ('D:/Documents/teaching/', '-TEMPLATE');";
+            using (SQLiteCommand tInsert = new SQLiteCommand(insert, conn))
+            {
+                tInsert.ExecuteNonQuery();
+            }
+
+            //Iterate through and execute
+
+            
+
+            conn.Close();
+        }
+
+        //FORMATTING
+
+        private void FormatForm(Form form)
+        {
+            form.BackColor = ColorTranslator.FromHtml("");
         }
     }
 }

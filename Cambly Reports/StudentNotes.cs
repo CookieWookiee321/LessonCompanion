@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-using MySql.Data.MySqlClient;
+using System.Data.SQLite;
 
 namespace Cambly_Reports
 {
     public partial class StudentNotes : Form
     {
+        SQLiteConnection conn = ReportCreator.conn;
+
         string notesInitial;
 
         public StudentNotes()
@@ -23,26 +25,30 @@ namespace Cambly_Reports
 
         private void StudentNotes_Load(object sender, EventArgs e)
         {
+            conn.Open();
+
             //Add names to combobox1
-            MySqlCommand cmd = ReportCreator.conn.CreateCommand();
-            cmd.CommandText = "SELECT Student.stuID, Student.sName, Lesson.lStudent " +
+            using (SQLiteCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT Student.stuID, Student.sName, Lesson.lStudent " +
                     "FROM Lesson INNER JOIN Student " +
                         "ON Student.stuID = Lesson.lStudent " +
                     "ORDER BY sName;";
-            MySqlDataReader read = cmd.ExecuteReader();
+                SQLiteDataReader read = cmd.ExecuteReader();
 
-            if (read != null && read.HasRows)
-            {
-                while (read.Read())
+                if (read != null && read.HasRows)
                 {
-                    if (!comboBox1.Items.Contains((string)read["sName"]))
+                    while (read.Read())
                     {
-                        comboBox1.Items.Add((string)read["sName"]);
+                        if (!comboBox1.Items.Contains((string)read["sName"]))
+                        {
+                            comboBox1.Items.Add((string)read["sName"]);
+                        }
                     }
                 }
-
-                read.Close();
             }
+
+            conn.Close();
 
             //Select name
             if (comboBox1.Items.Contains(ReportCreator.studentName))
@@ -53,31 +59,36 @@ namespace Cambly_Reports
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            conn.Open();
+
             string x = 
                 $"SELECT notes " +
                 $"FROM Student " +
                 $"WHERE sName = '{comboBox1.SelectedItem}';";
 
-            MySqlDataReader reader = new MySqlCommand(x, ReportCreator.conn).ExecuteReader();
-
-            if (reader != null && reader.HasRows)
+            using (SQLiteDataReader reader = new SQLiteCommand(x, conn).ExecuteReader())
             {
-                while (reader.Read())
+                if (reader != null && reader.HasRows)
                 {
-                    var bomRim = reader["notes"];
-                    string value = (bomRim == DBNull.Value) ? string.Empty : bomRim.ToString();
+                    while (reader.Read())
+                    {
+                        var bomRim = reader["notes"];
+                        string value = (bomRim == DBNull.Value) ? string.Empty : bomRim.ToString();
 
-                    if (value.Length == 0)
-                    {
-                        textBox1.Text = "";
+                        if (value.Length == 0)
+                        {
+                            textBox1.Text = "";
+                        }
+                        else
+                        {
+                            textBox1.Text = value;
+                        }
                     }
-                    else
-                    {
-                        textBox1.Text = value;
-                    }
+                    reader.Close();
                 }
-                reader.Close();
             }
+
+            conn.Close();
         }
 
         private void bSave_Click(object sender, EventArgs e)
@@ -87,12 +98,12 @@ namespace Cambly_Reports
                 $"SET notes = ? " +
                 $"WHERE sName = '{comboBox1.SelectedItem}';";
 
-            MySqlCommand command = new MySqlCommand(x, ReportCreator.conn);
-            MySqlParameter[] param = new MySqlParameter[1];
-            param[0] = new MySqlParameter("?", textBox1.Text);
-            command.Parameters.Add(param[0]);
-            command.ExecuteNonQuery();
-
+            using (SQLiteCommand command = new SQLiteCommand(x, conn))
+            {
+                command.Parameters.Add(new SQLiteParameter("?", textBox1.Text));
+                command.ExecuteNonQuery();
+            }
+                
             this.Dispose();
         }
     }

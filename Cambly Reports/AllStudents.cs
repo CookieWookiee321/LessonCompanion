@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Data.OleDb;
-using MySql.Data.MySqlClient;
+using System.Data.SQLite;
 
 namespace Cambly_Reports
 {
     public partial class AllStudents : Form
     {
-        string connectionString = "server=localhost;user id=root;database=cambly;password=W3dn35d33y5#;persistsecurityinfo=True";
-        MySqlConnection conn;
+        SQLiteConnection conn = ReportCreator.conn;
 
         public AllStudents()
         {
@@ -24,16 +22,14 @@ namespace Cambly_Reports
 
             try
             {
-                conn = new MySqlConnection();
-                conn.ConnectionString = connectionString;
                 conn.Open();
 
-                MySqlCommand command = conn.CreateCommand();
+                SQLiteCommand command = conn.CreateCommand();
                 command.CommandText =
-                    "SELECT sName, sCountry, firstLesson " +
+                    "SELECT sName, sNationality, firstLesson " +
                     "FROM Student " +
                     "ORDER BY sName";
-                MySqlDataReader reader = command.ExecuteReader();
+                SQLiteDataReader reader = command.ExecuteReader();
 
                 string[] row;
 
@@ -46,7 +42,7 @@ namespace Cambly_Reports
 
                         row = new string[] {
                             $"{(string)reader["sName"]}",
-                            $"{(string)reader["sCountry"]}",
+                            $"{(string)reader["sNationality"]}",
                             $"{dateString}"
                         };
                         dgvStudents.Rows.Add(row);
