@@ -109,13 +109,15 @@ namespace Cambly_Reports
         {
             if (checkBox1.CheckState == CheckState.Checked)
             {
-                rtxbxGrammar.Enabled = true;
-                rtxbxVocab.Enabled = true;
+                tbCorrections.Enabled = true;
+                tbNewLang.Enabled = true;
+                tbPron.Enabled = true;
             }
             else
             {
-                rtxbxGrammar.Enabled = false;
-                rtxbxVocab.Enabled = false;
+                tbCorrections.Enabled = false;
+                tbNewLang.Enabled = false;
+                tbPron.Enabled = false;
             }
         }
 
@@ -134,9 +136,9 @@ namespace Cambly_Reports
              *  Display a dialog asking if you still want to add this to a document
              *  Otherwise, don't export it
              */
-            if (rtxbxVocab.Enabled == true && rtxbxGrammar.Enabled == true)
+            if (tbNewLang.Enabled == true && tbCorrections.Enabled == true)
             {
-                if (rtxbxGrammar.Text.Length == 0 & rtxbxVocab.Text.Length == 0)
+                if (tbCorrections.Text.Length == 0 & tbNewLang.Text.Length == 0)
                 {
                     DialogResult res = MessageBox.Show(
                                         "No information entered for lesson notes. " +
@@ -191,8 +193,9 @@ namespace Cambly_Reports
                         txbxTopic.Clear();
                         txbxDate.Clear();
                         cmbxStudentName.Text = "";
-                        rtxbxVocab.Clear();
-                        rtxbxGrammar.Clear();
+                        tbNewLang.Clear();
+                        tbCorrections.Clear();
+                        tbPron.Clear();
 
                         cmbxStudentName.Select();
                     }
@@ -360,6 +363,7 @@ namespace Cambly_Reports
 
         //METHODS--------------------------------------------------------------------------------------
 
+
         private void GetSaveLocation()
         {
             string query = 
@@ -372,7 +376,7 @@ namespace Cambly_Reports
 
             while (reader.Read())
             {
-                reportOuput = $"{(string)reader["SaveDir"]}{(string)reader["TemplateFilename"]}";
+                reportOuput = $"{(string)reader["SaveDir"]}{(string)reader["TemplateFilename"]}.docx";
             }
             reader.Close();
             conn.Close();
@@ -435,9 +439,10 @@ namespace Cambly_Reports
             Dictionary<string, string> replaceDict = new Dictionary<string, string>();
             replaceDict.Add("#name#", cmbxStudentName.Text);
             replaceDict.Add("#date#", txbxDate.Text);
-            replaceDict.Add("#vocab#", rtxbxVocab.Text.Trim());
-            replaceDict.Add("#grammar#", rtxbxGrammar.Text.Trim());
+            replaceDict.Add("#vocab#", tbNewLang.Text.Trim());
+            replaceDict.Add("#grammar#", tbCorrections.Text.Trim());
             replaceDict.Add("#topic#", txbxTopic.Text);
+            replaceDict.Add("#pron#", tbPron.Text);
 
             return replaceDict;
         }
@@ -465,7 +470,12 @@ namespace Cambly_Reports
 
                 string fixedDate = ConvertDateFormat(txbxDate.Text);
                 document.SaveToFile($"D:/Documents/teaching/{fixedDate} - {cmbxStudentName.Text}.docx", FileFormat.Docx);
-                MessageBox.Show("All tasks are finished.", "Doc Processing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(
+                    "Report creation successful", 
+                    "Document Processing", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Information
+                    );
                 document.Close();
             }
             catch (Exception ex)

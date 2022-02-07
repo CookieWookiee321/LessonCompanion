@@ -31,7 +31,7 @@ namespace Cambly_Reports
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportCreator));
             this.cmbxStudentName = new System.Windows.Forms.ComboBox();
-            this.rtxbxGrammar = new System.Windows.Forms.RichTextBox();
+            this.tbCorrections = new System.Windows.Forms.RichTextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.txbxDate = new System.Windows.Forms.TextBox();
@@ -49,7 +49,7 @@ namespace Cambly_Reports
             this.studentListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentNotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblGrammar = new System.Windows.Forms.Label();
-            this.rtxbxVocab = new System.Windows.Forms.RichTextBox();
+            this.tbNewLang = new System.Windows.Forms.RichTextBox();
             this.lblVocab = new System.Windows.Forms.Label();
             this.btnExport = new System.Windows.Forms.Button();
             this.diaSave = new System.Windows.Forms.SaveFileDialog();
@@ -57,6 +57,8 @@ namespace Cambly_Reports
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.tbPron = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -71,10 +73,10 @@ namespace Cambly_Reports
             this.cmbxStudentName.TextChanged += new System.EventHandler(this.cmbxStudentName_TextChanged);
             this.cmbxStudentName.Leave += new System.EventHandler(this.cmbxStudentName_Leave);
             // 
-            // rtxbxGrammar
+            // tbCorrections
             // 
-            resources.ApplyResources(this.rtxbxGrammar, "rtxbxGrammar");
-            this.rtxbxGrammar.Name = "rtxbxGrammar";
+            resources.ApplyResources(this.tbCorrections, "tbCorrections");
+            this.tbCorrections.Name = "tbCorrections";
             // 
             // lblName
             // 
@@ -185,10 +187,10 @@ namespace Cambly_Reports
             resources.ApplyResources(this.lblGrammar, "lblGrammar");
             this.lblGrammar.Name = "lblGrammar";
             // 
-            // rtxbxVocab
+            // tbNewLang
             // 
-            resources.ApplyResources(this.rtxbxVocab, "rtxbxVocab");
-            this.rtxbxVocab.Name = "rtxbxVocab";
+            resources.ApplyResources(this.tbNewLang, "tbNewLang");
+            this.tbNewLang.Name = "tbNewLang";
             // 
             // lblVocab
             // 
@@ -233,9 +235,11 @@ namespace Cambly_Reports
             // groupBox2
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Controls.Add(this.tbPron);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.rtxbxVocab);
-            this.groupBox2.Controls.Add(this.rtxbxGrammar);
+            this.groupBox2.Controls.Add(this.tbNewLang);
+            this.groupBox2.Controls.Add(this.tbCorrections);
             this.groupBox2.Controls.Add(this.lblVocab);
             this.groupBox2.Controls.Add(this.lblGrammar);
             this.groupBox2.Name = "groupBox2";
@@ -247,6 +251,16 @@ namespace Cambly_Reports
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // tbPron
+            // 
+            resources.ApplyResources(this.tbPron, "tbPron");
+            this.tbPron.Name = "tbPron";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // ReportCreator
             // 
@@ -279,7 +293,7 @@ namespace Cambly_Reports
         #endregion
 
         private System.Windows.Forms.ComboBox cmbxStudentName;
-        private System.Windows.Forms.RichTextBox rtxbxGrammar;
+        private System.Windows.Forms.RichTextBox tbCorrections;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.TextBox txbxDate;
@@ -290,7 +304,7 @@ namespace Cambly_Reports
         private System.Windows.Forms.ToolStripMenuItem msFile;
         private System.Windows.Forms.ToolStripMenuItem tsmiNewStudent;
         private System.Windows.Forms.Label lblGrammar;
-        private System.Windows.Forms.RichTextBox rtxbxVocab;
+        private System.Windows.Forms.RichTextBox tbNewLang;
         private System.Windows.Forms.Label lblVocab;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.SaveFileDialog diaSave;
@@ -305,6 +319,8 @@ namespace Cambly_Reports
         private System.Windows.Forms.ToolStripMenuItem tsmiSaveLoc;
         private System.Windows.Forms.ToolStripMenuItem studentNotesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiAlwaysTop;
+        private System.Windows.Forms.RichTextBox tbPron;
+        private System.Windows.Forms.Label label1;
     }
 }
 

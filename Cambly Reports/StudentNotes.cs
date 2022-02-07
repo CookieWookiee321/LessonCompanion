@@ -93,6 +93,8 @@ namespace Cambly_Reports
 
         private void bSave_Click(object sender, EventArgs e)
         {
+            conn.Open();
+
             string x = 
                 $"UPDATE Student " +
                 $"SET notes = ? " +
@@ -103,6 +105,8 @@ namespace Cambly_Reports
                 command.Parameters.Add(new SQLiteParameter("?", textBox1.Text));
                 command.ExecuteNonQuery();
             }
+
+            conn.Close();
                 
             this.Dispose();
         }
