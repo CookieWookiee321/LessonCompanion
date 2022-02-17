@@ -107,7 +107,9 @@ namespace Cambly_Reports
             }
 
             conn.Close();
-                
+
+            ReportCreator.studentName = null;
+
             this.Dispose();
         }
     }

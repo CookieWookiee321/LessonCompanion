@@ -34,6 +34,11 @@ namespace Cambly_Reports
             LoadAllLessons();
 
             chbRecent.CheckState = CheckState.Checked;
+
+            if (ReportCreator.studentName is not null)
+            {
+                lbStudentList.SelectedItem = ReportCreator.studentName;
+            }
         }
         private void rbAllStudents_CheckedChanged(object sender, EventArgs e)
         {
@@ -103,6 +108,7 @@ namespace Cambly_Reports
 
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
+            ReportCreator.studentName = null;
             conn.Close();
         }
 

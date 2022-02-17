@@ -58,9 +58,9 @@ namespace Cambly_Reports
 
                 GetSaveLocation();
 
-                InitializeAutocomplete(conn, cmbxStudentName);
+                InitializeAutocomplete(conn, cbStudentName);
 
-                cmbxStudentName.Select();
+                cbStudentName.Select();
 
                 tsmiAlwaysTop.Checked = true;
                 this.TopMost = true;
@@ -123,7 +123,7 @@ namespace Cambly_Reports
 
         private void ReportCreator_Enter(object sender, EventArgs e)
         {
-            InitializeAutocomplete(conn, cmbxStudentName);
+            InitializeAutocomplete(conn, cbStudentName);
         }
 
         #region Buttons
@@ -167,7 +167,7 @@ namespace Cambly_Reports
             //Add lesson to DB
             conn.Open();
 
-            int stuID = FindStuID(cmbxStudentName.Text);
+            int stuID = FindStuID(cbStudentName.Text);
 
             StringBuilder sb = new StringBuilder();
             sb.Append(txbxDate.Text);
@@ -178,7 +178,7 @@ namespace Cambly_Reports
             string lessonInfo = "INSERT INTO Lesson (lDate, lTopic, lStudent)" +
                                 $"VALUES ('{correctDateTime}', '{txbxTopic.Text}', {stuID})";
 
-            if (txbxTopic.Text.Length > 0 | txbxDate.Text.Length > 0 | cmbxStudentName.Text.Length > 0)
+            if (txbxTopic.Text.Length > 0 | txbxDate.Text.Length > 0 | cbStudentName.Text.Length > 0)
             {
                 if (stuID != -1)
                 {
@@ -192,12 +192,12 @@ namespace Cambly_Reports
 
                         txbxTopic.Clear();
                         txbxDate.Clear();
-                        cmbxStudentName.Text = "";
+                        cbStudentName.Text = "";
                         tbNewLang.Clear();
                         tbCorrections.Clear();
                         tbPron.Clear();
 
-                        cmbxStudentName.Select();
+                        cbStudentName.Select();
                     }
                     catch (Exception ex)
                     {
@@ -255,7 +255,7 @@ namespace Cambly_Reports
                 onlyRecent = false;
             }
 
-            cmbxStudentName.Items.Clear();
+            cbStudentName.Items.Clear();
             RefreshComboBox();
         } //#doesn't work# display only recent students 
 
@@ -271,8 +271,12 @@ namespace Cambly_Reports
 
         private void viewStudentListToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LessonList studentList = new LessonList();
-            studentList.Show();
+            if (cbStudentName.SelectedItem != null)
+            {
+                studentName = cbStudentName.SelectedItem.ToString();
+            }
+
+            new LessonList().Show();
         } //open the Lesson List form
 
 
@@ -343,16 +347,16 @@ namespace Cambly_Reports
         private void cmbxStudentName_Leave(object sender, EventArgs e)
         {
             if (
-                cmbxStudentName.Text.Length > 0
-                && Char.IsLower(cmbxStudentName.Text[0])
+                cbStudentName.Text.Length > 0
+                && Char.IsLower(cbStudentName.Text[0])
                 )
             {
                 StringBuilder sb = new StringBuilder();
 
-                sb.Append(cmbxStudentName.Text);
+                sb.Append(cbStudentName.Text);
                 sb[0] = Char.ToUpper(sb[0]);
 
-                cmbxStudentName.Text = sb.ToString();
+                cbStudentName.Text = sb.ToString();
             }
         }
 
@@ -422,9 +426,9 @@ namespace Cambly_Reports
             {
                 while (read.Read())
                 {
-                    if (!cmbxStudentName.Items.Contains((string)read["sName"])) 
+                    if (!cbStudentName.Items.Contains((string)read["sName"])) 
                     {
-                        cmbxStudentName.Items.Add((string)read["sName"]);
+                        cbStudentName.Items.Add((string)read["sName"]);
                     }
                 }
 
@@ -437,7 +441,7 @@ namespace Cambly_Reports
         Dictionary<string, string> GetReplaceDictionary()
         {
             Dictionary<string, string> replaceDict = new Dictionary<string, string>();
-            replaceDict.Add("#name#", cmbxStudentName.Text);
+            replaceDict.Add("#name#", cbStudentName.Text);
             replaceDict.Add("#date#", txbxDate.Text);
             replaceDict.Add("#vocab#", tbNewLang.Text.Trim());
             replaceDict.Add("#grammar#", tbCorrections.Text.Trim());
@@ -469,7 +473,7 @@ namespace Cambly_Reports
                 }
 
                 string fixedDate = ConvertDateFormat(txbxDate.Text);
-                document.SaveToFile($"D:/Documents/teaching/{fixedDate} - {cmbxStudentName.Text}.docx", FileFormat.Docx);
+                document.SaveToFile($"D:/Documents/teaching/{fixedDate} - {cbStudentName.Text}.docx", FileFormat.Docx);
                 MessageBox.Show(
                     "Report creation successful", 
                     "Document Processing", 
@@ -513,12 +517,12 @@ namespace Cambly_Reports
 
         private void cmbxStudentName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            studentName = cmbxStudentName.Text;
+            studentName = cbStudentName.Text;
         }
 
         private void cmbxStudentName_TextChanged(object sender, EventArgs e)
         {
-            studentName = cmbxStudentName.Text;
+            studentName = cbStudentName.Text;
         }
 
         private void stcbAlwaysTop_Click(object sender, EventArgs e)

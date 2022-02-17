@@ -30,7 +30,7 @@ namespace Cambly_Reports
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportCreator));
-            this.cmbxStudentName = new System.Windows.Forms.ComboBox();
+            this.cbStudentName = new System.Windows.Forms.ComboBox();
             this.tbCorrections = new System.Windows.Forms.RichTextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
@@ -56,22 +56,22 @@ namespace Cambly_Reports
             this.calDate = new System.Windows.Forms.MonthCalendar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tbPron = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cmbxStudentName
+            // cbStudentName
             // 
-            resources.ApplyResources(this.cmbxStudentName, "cmbxStudentName");
-            this.cmbxStudentName.FormattingEnabled = true;
-            this.cmbxStudentName.Name = "cmbxStudentName";
-            this.cmbxStudentName.SelectedIndexChanged += new System.EventHandler(this.cmbxStudentName_SelectedIndexChanged);
-            this.cmbxStudentName.TextChanged += new System.EventHandler(this.cmbxStudentName_TextChanged);
-            this.cmbxStudentName.Leave += new System.EventHandler(this.cmbxStudentName_Leave);
+            resources.ApplyResources(this.cbStudentName, "cbStudentName");
+            this.cbStudentName.FormattingEnabled = true;
+            this.cbStudentName.Name = "cbStudentName";
+            this.cbStudentName.SelectedIndexChanged += new System.EventHandler(this.cmbxStudentName_SelectedIndexChanged);
+            this.cbStudentName.TextChanged += new System.EventHandler(this.cmbxStudentName_TextChanged);
+            this.cbStudentName.Leave += new System.EventHandler(this.cmbxStudentName_Leave);
             // 
             // tbCorrections
             // 
@@ -224,7 +224,7 @@ namespace Cambly_Reports
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.lblTopic);
             this.groupBox1.Controls.Add(this.lblDate);
-            this.groupBox1.Controls.Add(this.cmbxStudentName);
+            this.groupBox1.Controls.Add(this.cbStudentName);
             this.groupBox1.Controls.Add(this.lblName);
             this.groupBox1.Controls.Add(this.txbxTopic);
             this.groupBox1.Controls.Add(this.btnTodaysDate);
@@ -245,13 +245,6 @@ namespace Cambly_Reports
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
-            // checkBox1
-            // 
-            resources.ApplyResources(this.checkBox1, "checkBox1");
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // tbPron
             // 
             resources.ApplyResources(this.tbPron, "tbPron");
@@ -261,6 +254,13 @@ namespace Cambly_Reports
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
+            // 
+            // checkBox1
+            // 
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // ReportCreator
             // 
@@ -292,7 +292,7 @@ namespace Cambly_Reports
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbxStudentName;
+        private System.Windows.Forms.ComboBox cbStudentName;
         private System.Windows.Forms.RichTextBox tbCorrections;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblDate;
