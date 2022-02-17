@@ -35,9 +35,9 @@ namespace Cambly_Reports
 
             chbRecent.CheckState = CheckState.Checked;
 
-            if (ReportCreator.studentName is not null)
+            if (ReportCreator.studentName is not "")
             {
-                if (!lbStudentList.Items.Contains(lbStudentList.SelectedItem))
+                if (!lbStudentList.Items.Contains(ReportCreator.studentName))
                 {
                     chbRecent.CheckState = CheckState.Unchecked;
                 }
@@ -116,7 +116,7 @@ namespace Cambly_Reports
 
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
-            ReportCreator.studentName = null;
+            ReportCreator.studentName = "";
             conn.Close();
         }
 
