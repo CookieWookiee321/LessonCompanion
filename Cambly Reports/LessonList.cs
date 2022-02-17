@@ -37,17 +37,25 @@ namespace Cambly_Reports
 
             if (ReportCreator.studentName is not null)
             {
+                if (!lbStudentList.Items.Contains(lbStudentList.SelectedItem))
+                {
+                    chbRecent.CheckState = CheckState.Unchecked;
+                }
+
                 lbStudentList.SelectedItem = ReportCreator.studentName;
             }
         }
+
         private void rbAllStudents_CheckedChanged(object sender, EventArgs e)
         {
             //empty OLD
         }
+
         private void rbRecentStudents_CheckedChanged(object sender, EventArgs e)
         {
             //only need to use one event handler?
         }
+
         private void lbStudentList_SelectedIndexChanged(object sender, EventArgs e)
         {
             dgvTopicList.Rows.Clear();
@@ -113,6 +121,7 @@ namespace Cambly_Reports
         }
 
         //--------------------------------------------------------------------------------------------------
+
         private void AllResults()
         {
             string stuName = lbStudentList.SelectedItem.ToString();
@@ -196,6 +205,7 @@ namespace Cambly_Reports
                 MessageBox.Show("ERROR populating recentStudents Dictionary... " + ex.Message);
             }
         }
+
         private void PopulateStudentLists()
         {
             lbStudentList.Items.Clear();
@@ -209,6 +219,7 @@ namespace Cambly_Reports
                 lbStudentList.Items.AddRange(recentStudents.Values.ToArray());
             }
         }
+
         private void DataGridViewSetUp()
         {
             dgvTopicList.ColumnCount = 2;
