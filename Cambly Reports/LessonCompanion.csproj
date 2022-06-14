@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Cambly_Reports</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <SignAssembly>false</SignAssembly>
@@ -16,10 +16,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Frontend\MainFormOrig.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="cambly.laccdb" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Apis.Calendar.v3" Version="1.57.0.2696" />
+    <PackageReference Include="itext7" Version="7.2.2" />
     <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="6.0.1" />
     <PackageReference Include="MySql.Data" Version="8.0.28" />
     <PackageReference Include="Spire.Doc" Version="10.1.0" />

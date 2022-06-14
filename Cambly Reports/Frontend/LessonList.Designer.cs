@@ -1,5 +1,5 @@
 ﻿
-namespace Cambly_Reports
+namespace LessonCompanion
 {
     partial class LessonList
     {
