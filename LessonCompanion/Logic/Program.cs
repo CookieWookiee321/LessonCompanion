@@ -1,10 +1,9 @@
+using LessonCompanion;
 using System;
 using System.Windows.Forms;
 
-namespace LessonCompanion
-{
-    static class Program
-    {
+namespace LessonCompanion.Logic {
+    static class Program {
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -13,7 +12,7 @@ namespace LessonCompanion
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReportCreator());
+            Application.Run(new MainForm());
         }
     }
 }

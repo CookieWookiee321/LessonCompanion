@@ -2,11 +2,9 @@
 using System.Data.SQLite;
 using System.Windows.Forms;
 
-namespace LessonCompanion
-{
-    public partial class StudentNotes : Form
-    {
-        SQLiteConnection conn = ReportCreator.conn;
+namespace LessonCompanion {
+    public partial class StudentNotes : Form {
+        SQLiteConnection conn = MainForm.conn;
 
         public StudentNotes() {
             InitializeComponent();
@@ -16,16 +14,16 @@ namespace LessonCompanion
             conn.Open();
 
             //Add names to combobox1
-            using (SQLiteCommand cmd = conn.CreateCommand()) {
+            using(SQLiteCommand cmd = conn.CreateCommand()) {
                 cmd.CommandText = "SELECT Student.stuID, Student.stuName, Lesson.lStudent " +
                     "FROM Lesson INNER JOIN Student " +
                         "ON Student.stuID = Lesson.lStudent " +
                     "ORDER BY stuName;";
                 SQLiteDataReader read = cmd.ExecuteReader();
 
-                if (read != null && read.HasRows) {
-                    while (read.Read()) {
-                        if (!comboBox1.Items.Contains((string)read["stuName"])) {
+                if(read != null && read.HasRows) {
+                    while(read.Read()) {
+                        if(!comboBox1.Items.Contains((string)read["stuName"])) {
                             comboBox1.Items.Add((string)read["stuName"]);
                         }
                     }
@@ -35,8 +33,8 @@ namespace LessonCompanion
             conn.Close();
 
             //Select name
-            if (comboBox1.Items.Contains(ReportCreator.studentName)) {
-                comboBox1.SelectedItem = ReportCreator.studentName;
+            if(comboBox1.Items.Contains(MainForm.studentName)) {
+                comboBox1.SelectedItem = MainForm.studentName;
             }
         }
 
@@ -48,13 +46,13 @@ namespace LessonCompanion
                 $"FROM Student " +
                 $"WHERE stuName = '{comboBox1.SelectedItem}';";
 
-            using (SQLiteDataReader reader = new SQLiteCommand(x, conn).ExecuteReader()) {
-                if (reader != null && reader.HasRows) {
-                    while (reader.Read()) {
+            using(SQLiteDataReader reader = new SQLiteCommand(x, conn).ExecuteReader()) {
+                if(reader != null && reader.HasRows) {
+                    while(reader.Read()) {
                         var bomRim = reader["notes"];
                         string value = (bomRim == DBNull.Value) ? string.Empty : bomRim.ToString();
 
-                        if (value.Length == 0) {
+                        if(value.Length == 0) {
                             textBox1.Text = "";
                         }
                         else {
@@ -76,14 +74,14 @@ namespace LessonCompanion
                 $"SET notes = ? " +
                 $"WHERE stuName = '{comboBox1.SelectedItem}';";
 
-            using (SQLiteCommand command = new SQLiteCommand(x, conn)) {
+            using(SQLiteCommand command = new SQLiteCommand(x, conn)) {
                 command.Parameters.Add(new SQLiteParameter("?", textBox1.Text));
                 command.ExecuteNonQuery();
             }
 
             conn.Close();
 
-            ReportCreator.studentName = "";
+            MainForm.studentName = "";
 
             this.Dispose();
         }

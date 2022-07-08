@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Frontend\MainFormOrig.cs" />
+    <Compile Remove="UI\MainFormOrig.cs" />
   </ItemGroup>
 
   <ItemGroup>

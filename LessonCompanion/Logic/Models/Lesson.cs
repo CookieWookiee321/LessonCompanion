@@ -1,9 +1,7 @@
 ﻿using System;
 
-namespace Cambly_Reports.Backend
-{
-    internal class Lesson
-    {
+namespace LessonCompanion.Logic.Models {
+    public class Lesson {
         public Lesson(int lessonID, int studentID, DateTime date, string topic, string homework) {
             LessonID = lessonID;
             StudentID = studentID;
