@@ -6,6 +6,7 @@ using iText.Layout.Borders;
 using iText.Layout.Element;
 using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace LessonCompanion.Report {
     public class Report {
@@ -99,7 +100,8 @@ namespace LessonCompanion.Report {
                 foreach(var category in new Dictionary<string, string>[] {
                     NewLanguage,
                     Pronunciation,
-                    Corrections}) {
+                    Corrections}) 
+                {
                     if(category.Count != 0) {
                         switch(counter) {
                             case 0:
@@ -124,7 +126,8 @@ namespace LessonCompanion.Report {
 
                 return true;
             }
-            catch(Exception) {
+            catch(Exception e) {
+                MessageBox.Show(e.Message);
                 return false;
             }
         }

@@ -370,6 +370,7 @@ namespace LessonCompanion
             // 
             resources.ApplyResources(this.reportHistoryToolStripMenuItem, "reportHistoryToolStripMenuItem");
             this.reportHistoryToolStripMenuItem.Name = "reportHistoryToolStripMenuItem";
+            this.reportHistoryToolStripMenuItem.Click += new System.EventHandler(this.reportHistoryToolStripMenuItem_Click);
             // 
             // dictionaryToolStripMenuItem
             // 
@@ -414,7 +415,9 @@ namespace LessonCompanion
             // clearFormOnSubmitToolStripMenuItem
             // 
             resources.ApplyResources(this.clearFormOnSubmitToolStripMenuItem, "clearFormOnSubmitToolStripMenuItem");
+            this.clearFormOnSubmitToolStripMenuItem.Checked = true;
             this.clearFormOnSubmitToolStripMenuItem.CheckOnClick = true;
+            this.clearFormOnSubmitToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.clearFormOnSubmitToolStripMenuItem.Name = "clearFormOnSubmitToolStripMenuItem";
             // 
             // MainForm

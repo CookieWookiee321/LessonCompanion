@@ -296,6 +296,63 @@ namespace LessonCompanion.Logic {
 
             return retList.ToArray();
         }
+
+        /// <summary>
+        /// Method intended to populate the ListBox in the Report History Form
+        /// </summary>
+        /// <returns>Returns an array containing the date and student name of every report in descending order of creation</returns>
+        public static string[] FindReportsBasicInfo() {
+            var retList = new List<string>();
+            string query = @"
+                SELECT lessDate, stuName 
+                FROM Reports 
+                ORDER BY repID DESC";
+
+            using var conn = Connection;
+            conn.Open();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = query;
+
+            using var reader = cmd.ExecuteReader();
+            while (reader.Read()) {
+                var dt = (DateTime)reader[0];
+                string date = dt.ToShortDateString();
+
+                retList.Add($"{date} : {reader[1]}");
+            }
+
+            return retList.ToArray();
+        }
+
+        public static string[] FindReportsDetailedInfo(DateTime date, string name) {
+            var retArr = new string[7];
+            string query = @"
+                SELECT *
+                FROM Reports 
+                WHERE lessDate = @1 AND stuName = @2";
+
+            using var conn = Connection;
+            conn.Open();
+
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = query;
+            cmd.Parameters.AddRange(new SQLiteParameter[] {
+                new SQLiteParameter("@1", date),
+                new SQLiteParameter("@2", name)
+            });
+
+            using var reader = cmd.ExecuteReader();
+            reader.Read();
+            retArr[0] = name;
+            retArr[1] = date.ToShortDateString();
+            retArr[2] = (string)reader["lessTopic"];
+            retArr[3] = (string)reader["lessHomework"];
+            retArr[4] = (string)reader["newLanguage"];
+            retArr[5] = (string)reader["pronunciation"];
+            retArr[6] = (string)reader["corrections"];
+
+            return retArr;
+        }
         #endregion
 
         #region NEW_________________________________________________________________
@@ -567,6 +624,25 @@ namespace LessonCompanion.Logic {
             });
 
             if(cmd.ExecuteNonQuery() == 1) {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool DeleteReport(DateTime date, string studentName) {
+            string query = $@"
+                DELETE FROM Reports 
+                WHERE stuName = @name AND lessDate = @date";
+
+            using var conn = Connection;
+            conn.Open();
+            SQLiteCommand cmd = new SQLiteCommand(query, conn);
+            cmd.Parameters.AddRange(new SQLiteParameter[] {
+                new SQLiteParameter("date", date),
+                new SQLiteParameter("@name", studentName)
+            });
+
+            if (cmd.ExecuteNonQuery() == 1) {
                 return true;
             }
             return false;

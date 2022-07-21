@@ -1,14 +1,13 @@
-﻿using LessonCompanion.Logic;
+﻿using Cambly_Reports.UI;
+using LessonCompanion.Logic;
 using LessonCompanion.Logic.Models;
 using LessonCompanion.Report;
-using LessonCompanion.Frontend;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
 using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace LessonCompanion {
@@ -26,15 +25,21 @@ namespace LessonCompanion {
         public MainForm() => InitializeComponent();
 
         private void Testing() { 
-            cbStudentName.Text = "Abdullah (teenager)";
-            tTopic.Text = "test";
-            dgvNewLanguage.Rows.Add(new object[] { "hiking e:\"I'm going hiking tomorrow.\"" });
-            dgvNewLanguage.Rows.Add(new object[] { "join e:\"My friend is joining me for hiking tomorrow.\"" });
-            dgvNewLanguage.Rows.Add(new object[] { "anything else?" });
-            dgvNewLanguage.Rows.Add(new object[] { "I can't make it e:\"Sorry I can't make it to the party next week. I'm too busy.\"" });
-            dgvCorrections.Rows.Add(new object[] { "What do you play this weekend?" });
-            dgvCorrections.Rows.Add(new object[] { "My friend and I are you hiking" });
-            dgvCorrections.Rows.Add(new object[] { "I'm going a friend of mine for coffee" });
+            cbStudentName.Text = "Cagatay";
+            tDate.Text = "2022/07/06";
+            tTopic.Text = "Sleep (Speaking)";
+            dgvNewLanguage.Rows.Add(new object[] { "heavy sleeper e:\"I'm a heavy sleeper. I don't wake up easily.\"" });
+            dgvNewLanguage.Rows.Add(new object[] { "light sleeper e:\"I'm a light sleeper. I wake up easily.\"" }); 
+            dgvNewLanguage.Rows.Add(new object[] { "snore e:\"My friend always snores, so it wakes me up.\"" });
+            dgvNewLanguage.Rows.Add(new object[] { "the smallest light or sound wakes me up" });
+            dgvNewLanguage.Rows.Add(new object[] { "I go straight to sleep" });
+            dgvNewLanguage.Rows.Add(new object[] { "I only complain about waking up early" });
+            dgvNewLanguage.Rows.Add(new object[] { "I don't have a routine" });
+            dgvPronunciation.Rows.Add(new object[] { "6:30", "six thirty\nhalf past six" });
+            dgvCorrections.Rows.Add(new object[] { "I go to business in the morning", "I go to work..." });
+            dgvCorrections.Rows.Add(new object[] { "weekend too late sleep", "At the weekend, I go to sleep very late" });
+            dgvCorrections.Rows.Add(new object[] { "q:\"What do you do before bed?\" Toothbrush", "I brush my teeth" });
+            dgvCorrections.Rows.Add(new object[] { "3 and 4 days", "3 or 4 days" });
         }
 
         #region ACTIONS__________________________________________________________________________________________________________________
@@ -56,6 +61,17 @@ namespace LessonCompanion {
             
 
             cbStudentName.Select();
+        }
+
+        private void LoadReport(Dictionary<string, string> reportDetails) {
+            ResetForm();
+
+            cbStudentName.Text = reportDetails["name"];
+            tDate.Text = reportDetails["date"];
+            tTopic.Text = reportDetails["topic"];
+            tHomework.Text = reportDetails["homework"];
+
+
         }
         #endregion
 
@@ -100,6 +116,7 @@ namespace LessonCompanion {
                 
                 if(response == DialogResult.No) {
                     e.Cancel = true;
+                    return;
                 }
                 else {
                     if(conn != null && conn.State == System.Data.ConnectionState.Open) {
@@ -107,6 +124,9 @@ namespace LessonCompanion {
                     }
                 }
             }
+
+            e.Cancel = true;
+            Dispose();
         }
 
         //BUTTONS---------------------------------------------------------------------------------------------
@@ -116,6 +136,7 @@ namespace LessonCompanion {
             Dictionary<string, string> mapNewLang = CompanionActions.DgvToDict(dgvNewLanguage);
             Dictionary<string, string> mapPron = CompanionActions.DgvToDict(dgvPronunciation);
             Dictionary<string, string> mapCorr = CompanionActions.DgvToDict(dgvCorrections);
+            bool makeReport = true;
 
             //Check for dublicate keys (left-hand column)
             foreach(var map in new Dictionary<string, string>[] {
@@ -125,7 +146,9 @@ namespace LessonCompanion {
                     string key = map.ElementAt(0).Key;
                     string value = map.ElementAt(0).Value;
 
+                    //1011909 is a code to indicate duplicate LHS entries in a table
                     if(key.Equals("1011909") && value.Equals("1011909")) {
+                        MessageBox.Show("Duplicates are not allowed in the left-hand side column of a table.");
                         return;
                     }
                 }
@@ -211,9 +234,12 @@ namespace LessonCompanion {
                             thisReport.Create();
                         }
                     }
+                    else {
+                        makeReport = false;
+                    }
                 }
 
-                if(passStudent && passLesson) {
+                if(makeReport && (passStudent && passLesson)) {
                     MessageBox.Show("Lesson Saved to " + DBConnect.FindReportSaveLocation(thisReport));
                 }
 
@@ -244,7 +270,9 @@ namespace LessonCompanion {
         }
 
         private void newWindowStripMenuItem_Click(object sender, EventArgs e) {
-            new MainForm().Visible = true;
+            Thread newThread = new Thread(new ThreadStart(() => Application.Run(new MainForm())));
+            newThread.SetApartmentState(ApartmentState.STA);
+            newThread.Start();
         }
 
         //DATAGRIDVIEWS---------------------------------------------------------------------------------------
@@ -347,5 +375,18 @@ namespace LessonCompanion {
             studentName = cbStudentName.Text;
         }
         #endregion
+
+        private void reportHistoryToolStripMenuItem_Click(object sender, EventArgs e) {
+            var newRepList = new ReportList();
+            newRepList.bLoad.Click += new System.EventHandler(this.LoadReportFeedback);
+            newRepList.Show();
+        }
+
+        private void LoadReportFeedback(object sender, EventArgs e) {
+            var parent = (Form)sender;
+            //parent
+        }
+
+        public List<List<string[]>> Feedback { get; set; } = new List<List<string[]>>();
     }
 }

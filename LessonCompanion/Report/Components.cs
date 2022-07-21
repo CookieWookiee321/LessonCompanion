@@ -13,7 +13,7 @@ namespace LessonCompanion.Report {
         }
 
         public static Cell CCell(string input, int colSpan) {
-            var thisCell = new Cell(1, colSpan);
+            var thisCell = new Cell(1, colSpan).SetVerticalAlignment(iText.Layout.Properties.VerticalAlignment.MIDDLE);
             var markers = ReportActions.ExtractFromMarker(input);
 
             //QUESTION MARKER
