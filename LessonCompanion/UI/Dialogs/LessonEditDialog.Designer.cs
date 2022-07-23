@@ -24,7 +24,6 @@
         /// </summary>
         private void InitializeComponent() {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbStudentName = new System.Windows.Forms.ComboBox();
             this.tHomework = new System.Windows.Forms.TextBox();
             this.tTopic = new System.Windows.Forms.TextBox();
             this.tDate = new System.Windows.Forms.TextBox();
@@ -32,9 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bClose = new System.Windows.Forms.Button();
+            this.bSaveClose = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tName = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +44,6 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.18892F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.81108F));
-            this.tableLayoutPanel1.Controls.Add(this.cbStudentName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tHomework, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.tTopic, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.tDate, 1, 1);
@@ -52,6 +51,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tName, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -59,20 +59,9 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(397, 191);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // cbStudentName
-            // 
-            this.cbStudentName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbStudentName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cbStudentName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbStudentName.Font = new System.Drawing.Font("IBM Plex Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbStudentName.FormattingEnabled = true;
-            this.cbStudentName.Location = new System.Drawing.Point(103, 4);
-            this.cbStudentName.Name = "cbStudentName";
-            this.cbStudentName.Size = new System.Drawing.Size(291, 29);
-            this.cbStudentName.TabIndex = 25;
             // 
             // tHomework
             // 
@@ -97,9 +86,10 @@
             // tDate
             // 
             this.tDate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tDate.Font = new System.Drawing.Font("IBM Plex Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tDate.Font = new System.Drawing.Font("IBM Plex Sans KR SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tDate.Location = new System.Drawing.Point(103, 42);
             this.tDate.Name = "tDate";
+            this.tDate.ReadOnly = true;
             this.tDate.Size = new System.Drawing.Size(291, 30);
             this.tDate.TabIndex = 6;
             // 
@@ -151,41 +141,53 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Date:";
             // 
-            // button1
+            // bClose
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Font = new System.Drawing.Font("IBM Plex Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(52, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bClose.Font = new System.Drawing.Font("IBM Plex Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bClose.Location = new System.Drawing.Point(52, 5);
+            this.bClose.Name = "bClose";
+            this.bClose.Size = new System.Drawing.Size(94, 29);
+            this.bClose.TabIndex = 1;
+            this.bClose.Text = "Close";
+            this.bClose.UseVisualStyleBackColor = true;
+            this.bClose.Click += new System.EventHandler(this.bClose_Click);
             // 
-            // button2
+            // bSaveClose
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Font = new System.Drawing.Font("IBM Plex Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(233, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 29);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Save and Close";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bSaveClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bSaveClose.Font = new System.Drawing.Font("IBM Plex Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bSaveClose.Location = new System.Drawing.Point(233, 5);
+            this.bSaveClose.Name = "bSaveClose";
+            this.bSaveClose.Size = new System.Drawing.Size(128, 29);
+            this.bSaveClose.TabIndex = 2;
+            this.bSaveClose.Text = "Save and Close";
+            this.bSaveClose.UseVisualStyleBackColor = true;
+            this.bSaveClose.Click += new System.EventHandler(this.bSaveClose_Click);
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.bClose, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.bSaveClose, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 209);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(397, 39);
             this.tableLayoutPanel2.TabIndex = 3;
+            // 
+            // tName
+            // 
+            this.tName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tName.Font = new System.Drawing.Font("IBM Plex Sans KR SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tName.Location = new System.Drawing.Point(103, 4);
+            this.tName.Name = "tName";
+            this.tName.ReadOnly = true;
+            this.tName.Size = new System.Drawing.Size(291, 30);
+            this.tName.TabIndex = 6;
             // 
             // LessonEditDialog
             // 
@@ -212,12 +214,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bClose;
+        private System.Windows.Forms.Button bSaveClose;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox tHomework;
         private System.Windows.Forms.TextBox tTopic;
         private System.Windows.Forms.TextBox tDate;
-        private System.Windows.Forms.ComboBox cbStudentName;
+        private System.Windows.Forms.TextBox tName;
     }
 }

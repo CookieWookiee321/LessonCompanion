@@ -1,4 +1,5 @@
-﻿using LessonCompanion.Logic;
+﻿using Cambly_Reports.UI.Dialogs;
+using LessonCompanion.Logic;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
@@ -102,9 +103,9 @@ namespace LessonCompanion {
         }
 
         private void lbStudentList_SelectedIndexChanged(object sender, EventArgs e) {
-            if (!button2.Enabled) {
-                button2.Enabled = true;
-                button3.Enabled = true;
+            if (!bDelete.Enabled) {
+                bDelete.Enabled = true;
+                bEdit.Enabled = true;
             }
             
             dgvTopicList.Rows.Clear();
@@ -145,6 +146,21 @@ namespace LessonCompanion {
             }
             catch(Exception ex) {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void bEdit_Click(object sender, EventArgs e) {
+            if (dgvTopicList.SelectedCells.Count > 0) {
+                //get the row of the selected cell
+                int rowIndex = dgvTopicList.SelectedCells[0].RowIndex;
+
+                //get all the details
+                string stuName = lbStudentList.Text;
+                string date = dgvTopicList.Rows[rowIndex].Cells[0].Value.ToString();
+                string topic = dgvTopicList.Rows[rowIndex].Cells[1].Value.ToString();
+                string homework = dgvTopicList.Rows[rowIndex].Cells[2].Value.ToString();
+
+                new LessonEditDialog(stuName, date, topic, homework).ShowDialog();
             }
         }
     }

@@ -43,9 +43,9 @@ namespace LessonCompanion
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bEdit = new System.Windows.Forms.Button();
+            this.bDelete = new System.Windows.Forms.Button();
+            this.bClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTopicList)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -185,9 +185,9 @@ namespace LessonCompanion
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.bEdit, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.bDelete, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.bClose, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 425);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -196,40 +196,41 @@ namespace LessonCompanion
             this.tableLayoutPanel1.Size = new System.Drawing.Size(804, 43);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
-            // button3
+            // bEdit
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Enabled = false;
-            this.button3.Font = new System.Drawing.Font("IBM Plex Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(623, 7);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bEdit.Enabled = false;
+            this.bEdit.Font = new System.Drawing.Font("IBM Plex Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bEdit.Location = new System.Drawing.Point(623, 7);
+            this.bEdit.Name = "bEdit";
+            this.bEdit.Size = new System.Drawing.Size(94, 29);
+            this.bEdit.TabIndex = 2;
+            this.bEdit.Text = "Edit";
+            this.bEdit.UseVisualStyleBackColor = true;
+            this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
             // 
-            // button2
+            // bDelete
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Enabled = false;
-            this.button2.Font = new System.Drawing.Font("IBM Plex Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(355, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bDelete.Enabled = false;
+            this.bDelete.Font = new System.Drawing.Font("IBM Plex Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bDelete.Location = new System.Drawing.Point(355, 7);
+            this.bDelete.Name = "bDelete";
+            this.bDelete.Size = new System.Drawing.Size(94, 29);
+            this.bDelete.TabIndex = 1;
+            this.bDelete.Text = "Delete";
+            this.bDelete.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // bClose
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Font = new System.Drawing.Font("IBM Plex Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(87, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bClose.Font = new System.Drawing.Font("IBM Plex Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bClose.Location = new System.Drawing.Point(87, 7);
+            this.bClose.Name = "bClose";
+            this.bClose.Size = new System.Drawing.Size(94, 29);
+            this.bClose.TabIndex = 0;
+            this.bClose.Text = "Close";
+            this.bClose.UseVisualStyleBackColor = true;
             // 
             // LessonList
             // 
@@ -265,8 +266,8 @@ namespace LessonCompanion
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bEdit;
+        private System.Windows.Forms.Button bDelete;
+        private System.Windows.Forms.Button bClose;
     }
 }

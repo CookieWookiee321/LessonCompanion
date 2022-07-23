@@ -256,15 +256,28 @@ namespace LessonCompanion.Logic {
             return retList.ToArray();
         }
 
-        public static string[] FindStudentNamesAll() {
+        /// <summary>
+        /// </summary>
+        /// <param name="isOrdered"></param>
+        /// <returns>Returns an array of every student's name in the database. This array may be in alphabetical order, or in their order of creation.</returns>
+        public static string[] FindStudentNamesAll(bool isOrdered) {
             var retList = new List<string>();
 
             using var conn = Connection;
             conn.Open();
             SQLiteCommand cmd = conn.CreateCommand();
-            cmd.CommandText = @"
+
+            if (!isOrdered) {
+                cmd.CommandText = @"
                     SELECT s.stuName
                     FROM Students as s;";
+            }
+            else {
+                cmd.CommandText = @"
+                    SELECT s.stuName
+                    FROM Students as s
+                    ORDER BY stuName;";
+            }
 
             using SQLiteDataReader read = cmd.ExecuteReader();
             if(read != null && read.HasRows) {
@@ -607,6 +620,35 @@ namespace LessonCompanion.Logic {
                 return true;
             }
             return false;
+        }
+
+        /// <summary>
+        /// Is only able to update topic and homework details currently.
+        /// </summary>
+        /// <param name="studentName"></param>
+        /// <param name="date"></param>
+        /// <param name="topic"></param>
+        /// <param name="homework"></param>
+        /// <returns>True if update is successful, or else false if not.</returns>
+        public static bool UpdateLessonDetails(string studentName, DateTime date, string topic, string homework) {
+            string query = @"
+                UPDATE Lessons 
+                SET lessTopic = @topic AND lessHomework = @homework 
+                WHERE lessDate = @date AND stuID = (SELECT stuID 
+                                                    FROM Students 
+                                                    WHERE stuName = @name);";
+
+            using var conn = Connection;
+            conn.Open();
+            using var cmd = new SQLiteCommand(query, conn);
+            var param = new SQLiteParameter[] { 
+                new SQLiteParameter("@topic", topic),
+                new SQLiteParameter("@homework", homework),
+                new SQLiteParameter("@date", date),
+                new SQLiteParameter("@name", studentName)
+            };
+            cmd.Parameters.AddRange(param);
+            return cmd.ExecuteNonQuery() == 1;
         }
         #endregion
 
