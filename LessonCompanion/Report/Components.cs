@@ -133,5 +133,13 @@ namespace LessonCompanion.Report {
                         .SetFont(fontHelveticaIt)
                         .SetFontSize(9);
         }
+
+        public static Paragraph CTextFooter(string text) {
+            var fontHelveticaIt = PdfFontFactory.CreateFont(StandardFonts.HELVETICA_OBLIQUE);
+
+            return new Paragraph(text)
+                        .SetFont(fontHelveticaIt)
+                        .SetFontSize(9);
+        }
     }
 }

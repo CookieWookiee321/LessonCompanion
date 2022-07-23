@@ -57,223 +57,268 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;tTopic.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="dataGridViewComboBoxColumn2.HeaderText" xml:space="preserve">
-    <value>New</value>
-  </data>
-  <data name="&gt;&gt;tNewLanguage.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;lblDate.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="rtxbxVocab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 194</value>
+  <data name="lHomework.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 149</value>
   </data>
-  <data name="&gt;&gt;rtxbxVocab.Name" xml:space="preserve">
-    <value>rtxbxVocab</value>
+  <data name="&gt;&gt;rtxbxGrammar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnTodaysDate.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="lblGrammar.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
-  <data name="&gt;&gt;tDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblGrammar.Name" xml:space="preserve">
-    <value>lblGrammar</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 125</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn1</value>
-  </data>
-  <data name="dgvPronunciation.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel2.Name" xml:space="preserve">
-    <value>splitContainer2.Panel2</value>
-  </data>
-  <data name="rtxbxVocab.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnAddArray.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="rtxbxNew.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 165</value>
-  </data>
-  <data name="&gt;&gt;tTopic.Name" xml:space="preserve">
-    <value>tTopic</value>
-  </data>
-  <data name="&gt;&gt;clearFormOnSubmitToolStripMenuItem.Name" xml:space="preserve">
-    <value>clearFormOnSubmitToolStripMenuItem</value>
-  </data>
-  <data name="lblDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 20</value>
-  </data>
-  <data name="&gt;&gt;tsmiOnlyRecent.Name" xml:space="preserve">
-    <value>tsmiOnlyRecent</value>
-  </data>
-  <data name="txbxHomework.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;lblVocab.Name" xml:space="preserve">
-    <value>lblVocab</value>
-  </data>
-  <data name="&gt;&gt;tsmiOnlyRecent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chbReport.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;clearFormOnSubmitToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;chbReport.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn3</value>
-  </data>
-  <data name="tHomework.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnTodaysDate.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;tsmiRestart.Name" xml:space="preserve">
-    <value>tsmiRestart</value>
-  </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 24</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewComboBoxColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewComboBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgvCorrections.Name" xml:space="preserve">
-    <value>dgvCorrections</value>
-  </data>
-  <data name="reportsDefaultOnToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="dictionaryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 26</value>
   </data>
-  <data name="&gt;&gt;lblTopic.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
+  <data name="tsmiSaveLoc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 26</value>
   </data>
-  <data name="tbNewLang.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>Original</value>
   </data>
-  <data name="&gt;&gt;tDate.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;rtxbxVocab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tbPron.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;rtxbxPron.Name" xml:space="preserve">
+    <value>rtxbxPron</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn4</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MainForm</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="&gt;&gt;settingsToolStripMenuItem.Name" xml:space="preserve">
-    <value>settingsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;lblName.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cbStudentName.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;dialogsToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;tsmiRestart.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="rtxbxNew.Text" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;bAllStudents.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;chbReport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tbPron.Name" xml:space="preserve">
-    <value>tbPron</value>
+  <data name="&gt;&gt;rtxbxPron.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
+    <value>checkBox1</value>
   </data>
   <data name="lblTopic.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="&gt;&gt;btnAddArray.Name" xml:space="preserve">
-    <value>btnAddArray</value>
+  <data name="&gt;&gt;dialogsToolStripMenuItem.Name" xml:space="preserve">
+    <value>dialogsToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;rtxbxGrammar.Name" xml:space="preserve">
-    <value>rtxbxGrammar</value>
+  <data name="lblNew.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 170</value>
   </data>
-  <data name="&gt;&gt;changeLogToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txbxDate.Name" xml:space="preserve">
-    <value>txbxDate</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgvNewLanguage.Name" xml:space="preserve">
-    <value>dgvNewLanguage</value>
-  </data>
-  <data name="&gt;&gt;rtxbxVocab.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="splitContainer2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 23</value>
-  </data>
-  <data name="btnExport.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;lblTopic.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;txbxTopic.Name" xml:space="preserve">
+    <value>txbxTopic</value>
   </data>
-  <data name="tbCorrections.Text" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;lblName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="txbxDate.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="dgvCorrections.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
   </data>
-  <data name="rtxbxVocab.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;tsmiOnlyRecent.Name" xml:space="preserve">
+    <value>tsmiOnlyRecent</value>
   </data>
-  <data name="&gt;&gt;bAllStudents.Name" xml:space="preserve">
-    <value>bAllStudents</value>
+  <data name="rtxbxVocab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 194</value>
+  </data>
+  <data name="lblNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 20</value>
+  </data>
+  <data name="&gt;&gt;settingsToolStripMenuItem.Name" xml:space="preserve">
+    <value>settingsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;alwaysOnTopToolStripMenuItem.Name" xml:space="preserve">
+    <value>alwaysOnTopToolStripMenuItem</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Cambly Report Creator</value>
   </data>
-  <data name="lblHomework.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 20</value>
+  <data name="btnAddArray.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;lblHomework.Type" xml:space="preserve">
+  <data name="&gt;&gt;tsmiChangeSaveLoc.Name" xml:space="preserve">
+    <value>tsmiChangeSaveLoc</value>
+  </data>
+  <data name="lblName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 39</value>
+  </data>
+  <data name="&gt;&gt;changeLogToolStripMenuItem.Name" xml:space="preserve">
+    <value>changeLogToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;bAllStudents.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
+    <value>toolStripMenuItem2</value>
+  </data>
+  <data name="&gt;&gt;lblCorrections.Name" xml:space="preserve">
+    <value>lblCorrections</value>
+  </data>
+  <data name="tbNewLang.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="msFile.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="btnTodaysDate.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblPron.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblPron.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;calDate.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;txbxTopic.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblHomework.Text" xml:space="preserve">
+    <value>Homework:</value>
+  </data>
+  <data name="&gt;&gt;tbCorrections.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 26</value>
+  </data>
+  <data name="tHomework.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btnTodaysDate.Text" xml:space="preserve">
+    <value>Today's Date</value>
+  </data>
+  <data name="tbCorrections.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cbStudentName.Name" xml:space="preserve">
+    <value>cbStudentName</value>
+  </data>
+  <data name="colCorNew.HeaderText" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="&gt;&gt;lblGrammar.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel2</value>
+  </data>
+  <data name="&gt;&gt;btnExport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="reportsDefaultOnToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="lblTopic.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;alwaysOnTopToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbxDate.Name" xml:space="preserve">
+    <value>txbxDate</value>
+  </data>
+  <data name="tTopic.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rtxbxNew.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;dgvNewLanguage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="bAllStudents.Location" type="System.Drawing.Point, System.Drawing">
+    <value>412, 26</value>
+  </data>
+  <data name="lblDate.Text" xml:space="preserve">
+    <value>Date of Class:</value>
+  </data>
+  <data name="&gt;&gt;tbCorrections.Name" xml:space="preserve">
+    <value>tbCorrections</value>
+  </data>
+  <data name="&gt;&gt;lHomework.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbPron.Name" xml:space="preserve">
+    <value>tbPron</value>
+  </data>
+  <data name="&gt;&gt;cbStudentName.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;lessonListToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rtxbxPron.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 165</value>
+  </data>
+  <data name="&gt;&gt;tTopic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;lHomework.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;colCorNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewComboBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddArray.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="msFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 24</value>
+  </data>
+  <data name="&gt;&gt;dgvPronunciation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tHomework.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;tsmiOnlyRecent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rtxbxVocab.Name" xml:space="preserve">
+    <value>rtxbxVocab</value>
+  </data>
+  <data name="&gt;&gt;tsmiAlwaysTop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;studentListToolStripMenuItem.Name" xml:space="preserve">
+    <value>studentListToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;tTopic.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;colCorrNew.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -281,1172 +326,1127 @@
   <data name="&gt;&gt;newWindowStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblCorrections.AutoSize" type="System.Boolean, mscorlib">
+  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel1</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 6</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;closeToolStripMenuItem.Name" xml:space="preserve">
+    <value>closeToolStripMenuItem</value>
+  </data>
+  <data name="btnExport.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="btnExport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 47</value>
+  </data>
+  <data name="tNewLanguage.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;rtxbxVocab.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="calDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 70</value>
+  </data>
+  <data name="&gt;&gt;btnExport.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txbxDate.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;rtxbxNew.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dgvCorrections.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel2</value>
+  </data>
+  <data name="txbxHomework.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;rtxbxGrammar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmiChangeSaveLoc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 24</value>
+  </data>
+  <data name="lblDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="colCorrNew.HeaderText" xml:space="preserve">
-    <value>Column1</value>
+  <data name="&gt;&gt;lHomework.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;bAllStudents.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;tsmiAlwaysTop.Name" xml:space="preserve">
+    <value>tsmiAlwaysTop</value>
+  </data>
+  <data name="rtxbxCorrections.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;clearFormOnSubmitToolStripMenuItem.Name" xml:space="preserve">
+    <value>clearFormOnSubmitToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="rtxbxPron.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 165</value>
+  <data name="tPronunciation.Text" xml:space="preserve">
+    <value />
   </data>
-  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 26</value>
+  <data name="&gt;&gt;txbxHomework.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblTopic.Name" xml:space="preserve">
-    <value>lblTopic</value>
+  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblHomework.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 139</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rtxbxCorrections.Name" xml:space="preserve">
+    <value>rtxbxCorrections</value>
+  </data>
+  <data name="dgvPronunciation.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;tTopic.Name" xml:space="preserve">
+    <value>tTopic</value>
+  </data>
+  <data name="lblNew.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPron.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 20</value>
+  </data>
+  <data name="newWindowStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 26</value>
+  </data>
+  <data name="&gt;&gt;rtxbxNew.Name" xml:space="preserve">
+    <value>rtxbxNew</value>
   </data>
   <data name="lHomework.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="lblNew.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+  <data name="dataGridViewComboBoxColumn1.HeaderText" xml:space="preserve">
+    <value>New</value>
   </data>
-  <data name="&gt;&gt;dgvNewLanguage.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tbPron.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>Original</value>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="rtxbxNew.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="lblTopic.Text" xml:space="preserve">
+    <value>Topic:</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;rtxbxPron.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;tbCorrections.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel2</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;splitContainer2.Panel2.Name" xml:space="preserve">
+    <value>splitContainer2.Panel2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewComboBoxColumn2.Name" xml:space="preserve">
+    <value>dataGridViewComboBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;txbxTopic.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;restartToolStripMenuItem.Name" xml:space="preserve">
-    <value>restartToolStripMenuItem</value>
+  <data name="&gt;&gt;chbReport.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="tbPron.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 24</value>
   </data>
-  <data name="&gt;&gt;lessonListToolStripMenuItem.Type" xml:space="preserve">
+  <data name="lblGrammar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>234, 171</value>
+  </data>
+  <data name="&gt;&gt;lblNew.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dgvNewLanguage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tDate.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="btnExport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 29</value>
+  </data>
+  <data name="&gt;&gt;reportHistoryToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblCorrections.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;btnTodaysDate.Name" xml:space="preserve">
+    <value>btnTodaysDate</value>
   </data>
-  <data name="lessonListToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+  <data name="&gt;&gt;lblName.Name" xml:space="preserve">
+    <value>lblName</value>
   </data>
-  <data name="tTopic.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="rtxbxNew.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
   </data>
-  <data name="&gt;&gt;tsmiNewStudent.Name" xml:space="preserve">
-    <value>tsmiNewStudent</value>
+  <data name="lblName.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;splitContainer2.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer2</value>
-  </data>
-  <data name="&gt;&gt;tbNewLang.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;rtxbxNew.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="changeLogToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 25</value>
-  </data>
-  <data name="&gt;&gt;rtxbxCorrections.Type" xml:space="preserve">
+  <data name="&gt;&gt;tPronunciation.Type" xml:space="preserve">
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;chbReport.Name" xml:space="preserve">
-    <value>chbReport</value>
+  <data name="&gt;&gt;rtxbxGrammar.Name" xml:space="preserve">
+    <value>rtxbxGrammar</value>
   </data>
-  <data name="&gt;&gt;rtxbxGrammar.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
   </data>
-  <data name="lblNew.Text" xml:space="preserve">
-    <value>New:</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 20</value>
   </data>
-  <data name="cbStudentName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 26</value>
+  <data name="alwaysOnTopToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 26</value>
+  </data>
+  <data name="&gt;&gt;reportHistoryToolStripMenuItem.Name" xml:space="preserve">
+    <value>reportHistoryToolStripMenuItem</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 140</value>
+  </data>
+  <data name="&gt;&gt;changeLogToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;colCorOrig.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmiSaveLoc.Name" xml:space="preserve">
+    <value>tsmiSaveLoc</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewComboBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewComboBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="lHomework" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblName" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblDate" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblTopic" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tTopic" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tHomework" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="cbStudentName" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tDate" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="Percent,20,Percent,20,Percent,30,Percent,30" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="&gt;&gt;cmbxStudentName.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="dgvNewLanguage.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+  <data name="dgvCorrections.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
-    <value>splitContainer2.Panel1</value>
+  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
   </data>
-  <data name="studentListToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 24</value>
+  <data name="&gt;&gt;lblHomework.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;txbxTopic.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblCorrections.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="rtxbxNew.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txbxDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 27</value>
+  </data>
+  <data name="chbReport.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;tNewLanguage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer2</value>
+  </data>
+  <data name="rtxbxCorrections.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="&gt;&gt;txbxDate.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="cbStudentName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 26</value>
+  </data>
+  <data name="&gt;&gt;diaSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 26</value>
+  </data>
+  <data name="&gt;&gt;rtxbxGrammar.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;tbNewLang.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;lblName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tsmiNewStudent.Text" xml:space="preserve">
+    <value>New Student</value>
+  </data>
+  <data name="&gt;&gt;diaSave.Name" xml:space="preserve">
+    <value>diaSave</value>
+  </data>
+  <data name="clearFormOnSubmitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 26</value>
+  </data>
+  <data name="&gt;&gt;txbxHomework.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;cmbxStudentName.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblCorrections.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 170</value>
-  </data>
-  <data name="lblName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 20</value>
-  </data>
-  <data name="lblCorrections.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 20</value>
-  </data>
-  <data name="rtxbxCorrections.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;txbxDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dgvCorrections.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 23</value>
-  </data>
-  <data name="lblTopic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 106</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="&gt;&gt;tbPron.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;rtxbxCorrections.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="clearFormOnSubmitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>272, 26</value>
-  </data>
-  <data name="&gt;&gt;reportsDefaultOnToolStripMenuItem.Name" xml:space="preserve">
-    <value>reportsDefaultOnToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;bAllStudents.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 24</value>
-  </data>
-  <data name="&gt;&gt;lblHomework.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnExport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 47</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;dgvNewLanguage.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
-  </data>
-  <data name="dgvNewLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 23</value>
-  </data>
-  <data name="&gt;&gt;rtxbxVocab.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lHomework.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;rtxbxPron.Name" xml:space="preserve">
-    <value>rtxbxPron</value>
-  </data>
-  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 24</value>
-  </data>
-  <data name="lblPron.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;txbxTopic.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 20</value>
-  </data>
-  <data name="lblPron.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 73</value>
-  </data>
-  <data name="&gt;&gt;dialogsToolStripMenuItem.Name" xml:space="preserve">
-    <value>dialogsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;tsmiAlwaysTop.Name" xml:space="preserve">
-    <value>tsmiAlwaysTop</value>
-  </data>
-  <data name="&gt;&gt;cmbxStudentName.Name" xml:space="preserve">
-    <value>cmbxStudentName</value>
-  </data>
-  <data name="bAllStudents.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;dgvPronunciation.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="chbReport.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="tsmiOnlyRecent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 26</value>
-  </data>
-  <data name="bAllStudents.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 26</value>
-  </data>
-  <data name="&gt;&gt;txbxHomework.Name" xml:space="preserve">
-    <value>txbxHomework</value>
-  </data>
-  <data name="&gt;&gt;tbNewLang.Name" xml:space="preserve">
-    <value>tbNewLang</value>
-  </data>
-  <data name="txbxTopic.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;btnAddArray.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cmbxStudentName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 36</value>
-  </data>
-  <data name="&gt;&gt;tHomework.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tPronunciation.Name" xml:space="preserve">
-    <value>tPronunciation</value>
-  </data>
-  <data name="&gt;&gt;rtxbxNew.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddArray.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lHomework.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 149</value>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn3</value>
   </data>
   <data name="dialogsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 24</value>
   </data>
-  <data name="txbxHomework.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 136</value>
+  <data name="txbxTopic.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="&gt;&gt;btnTodaysDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;lHomework.Name" xml:space="preserve">
     <value>lHomework</value>
   </data>
-  <data name="&gt;&gt;alwaysOnTopToolStripMenuItem.Name" xml:space="preserve">
-    <value>alwaysOnTopToolStripMenuItem</value>
+  <data name="&gt;&gt;txbxHomework.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="rtxbxCorrections.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
+  <data name="rtxbxVocab.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;tbNewLang.Name" xml:space="preserve">
+    <value>tbNewLang</value>
+  </data>
+  <data name="cmbxStudentName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 36</value>
+  </data>
+  <data name="&gt;&gt;tNewLanguage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnTodaysDate.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="dgvNewLanguage.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;tHomework.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddArray.Name" xml:space="preserve">
+    <value>btnAddArray</value>
   </data>
   <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;lblName.Name" xml:space="preserve">
-    <value>lblName</value>
+  <data name="&gt;&gt;studentNotesToolStripMenuItem.Name" xml:space="preserve">
+    <value>studentNotesToolStripMenuItem</value>
   </data>
-  <data name="msFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 24</value>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 24</value>
   </data>
-  <data name="&gt;&gt;cbStudentName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbCorrections.Name" xml:space="preserve">
-    <value>tbCorrections</value>
-  </data>
-  <data name="&gt;&gt;tbNewLang.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="tsmiNewStudent.Text" xml:space="preserve">
-    <value>New Student</value>
-  </data>
-  <data name="&gt;&gt;lHomework.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;settingsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnExport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txbxTopic.Name" xml:space="preserve">
-    <value>txbxTopic</value>
-  </data>
-  <data name="&gt;&gt;btnExport.Name" xml:space="preserve">
-    <value>btnExport</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblHomework.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 139</value>
-  </data>
-  <data name="btnAddArray.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 70</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblHomework.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="tsmiRestart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 26</value>
-  </data>
-  <data name="tsmiSaveLoc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 26</value>
-  </data>
-  <data name="&gt;&gt;btnExport.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Name" xml:space="preserve">
-    <value>splitContainer2</value>
-  </data>
-  <data name="&gt;&gt;diaSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dgvCorrections.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;alwaysOnTopToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tHomework.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 146</value>
-  </data>
-  <data name="&gt;&gt;lblCorrections.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;tsmiSaveLoc.Name" xml:space="preserve">
-    <value>tsmiSaveLoc</value>
-  </data>
-  <data name="alwaysOnTopToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="&gt;&gt;viewStudentListToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>503, 250</value>
-  </data>
-  <data name="tsmiChangeSaveLoc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 26</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn2</value>
-  </data>
-  <data name="lblPron.Location" type="System.Drawing.Point, System.Drawing">
-    <value>454, 170</value>
-  </data>
-  <data name="rtxbxPron.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;tNewLanguage.Name" xml:space="preserve">
-    <value>tNewLanguage</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewComboBoxColumn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewComboBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="&gt;&gt;tTopic.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;tTopic.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblPron.Name" xml:space="preserve">
-    <value>lblPron</value>
-  </data>
-  <data name="&gt;&gt;changeLogToolStripMenuItem.Name" xml:space="preserve">
-    <value>changeLogToolStripMenuItem</value>
-  </data>
-  <data name="cmbxStudentName.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lessonListToolStripMenuItem.Name" xml:space="preserve">
-    <value>lessonListToolStripMenuItem</value>
-  </data>
-  <data name="studentNotesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 24</value>
-  </data>
-  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="lHomework" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblName" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblDate" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblTopic" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tTopic" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tHomework" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="cbStudentName" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tDate" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="Percent,20,Percent,20,Percent,30,Percent,30" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="&gt;&gt;dictionaryToolStripMenuItem.Name" xml:space="preserve">
-    <value>dictionaryToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;viewStudentListToolStripMenuItem.Name" xml:space="preserve">
-    <value>viewStudentListToolStripMenuItem</value>
-  </data>
-  <data name="tNewLanguage.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 26</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colCorrNew.Name" xml:space="preserve">
-    <value>colCorrNew</value>
-  </data>
-  <data name="&gt;&gt;colCorOrig.Name" xml:space="preserve">
-    <value>colCorOrig</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rtxbxNew.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="chbReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>314, 0</value>
-  </data>
-  <data name="dgvCorrections.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;tsmiSaveLoc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblHomework.Text" xml:space="preserve">
-    <value>Homework:</value>
-  </data>
-  <data name="tPronunciation.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="txbxHomework.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 27</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 6</value>
-  </data>
-  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblDate.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 24</value>
-  </data>
-  <data name="dgvPronunciation.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="&gt;&gt;chbReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnTodaysDate.Text" xml:space="preserve">
-    <value>Today's Date</value>
-  </data>
-  <data name="&gt;&gt;tbNewLang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tDate.Name" xml:space="preserve">
-    <value>tDate</value>
-  </data>
-  <data name="&gt;&gt;txbxHomework.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="splitContainer2.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 153</value>
-  </data>
-  <data name="&gt;&gt;lblHomework.Name" xml:space="preserve">
-    <value>lblHomework</value>
-  </data>
-  <data name="&gt;&gt;closeToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;reportHistoryToolStripMenuItem.Name" xml:space="preserve">
-    <value>reportHistoryToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;lblNew.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txbxDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 70</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="restartToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 26</value>
-  </data>
-  <data name="&gt;&gt;lblNew.Name" xml:space="preserve">
-    <value>lblNew</value>
-  </data>
-  <data name="&gt;&gt;rtxbxPron.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tsmiAlwaysTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 26</value>
-  </data>
-  <data name="&gt;&gt;dgvPronunciation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
-    <value>toolStripMenuItem1</value>
-  </data>
-  <data name="tbNewLang.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;colCorNew.Name" xml:space="preserve">
-    <value>colCorNew</value>
-  </data>
-  <data name="&gt;&gt;studentListToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colCorNew.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewComboBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txbxTopic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 27</value>
-  </data>
-  <data name="colCorNew.HeaderText" xml:space="preserve">
+  <data name="dataGridViewComboBoxColumn2.HeaderText" xml:space="preserve">
     <value>New</value>
   </data>
-  <data name="&gt;&gt;lblHomework.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lblName.Text" xml:space="preserve">
-    <value>Student Name:</value>
-  </data>
-  <data name="&gt;&gt;tNewLanguage.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
-  </data>
-  <data name="&gt;&gt;rtxbxVocab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;reportsDefaultOnToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tbNewLang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 76</value>
-  </data>
-  <data name="txbxDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 27</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="rtxbxNew.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="tNewLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 23</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="reportHistoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="&gt;&gt;lblDate.Name" xml:space="preserve">
-    <value>lblDate</value>
-  </data>
-  <data name="&gt;&gt;rtxbxGrammar.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;bAllStudents.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="tNewLanguage.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btnExport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 29</value>
-  </data>
-  <data name="rtxbxCorrections.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 165</value>
-  </data>
-  <data name="&gt;&gt;txbxDate.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>683, 371</value>
-  </data>
-  <data name="&gt;&gt;newWindowStripMenuItem.Name" xml:space="preserve">
-    <value>newWindowStripMenuItem</value>
-  </data>
-  <data name="lblCorrections.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;dgvCorrections.Parent" xml:space="preserve">
-    <value>splitContainer2.Panel2</value>
-  </data>
-  <data name="&gt;&gt;lblDate.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblTopic.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="&gt;&gt;dgvNewLanguage.Name" xml:space="preserve">
+    <value>dgvNewLanguage</value>
   </data>
-  <data name="&gt;&gt;calDate.Name" xml:space="preserve">
-    <value>calDate</value>
+  <data name="&gt;&gt;txbxHomework.Name" xml:space="preserve">
+    <value>txbxHomework</value>
   </data>
-  <data name="tDate.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewComboBoxColumn1.Name" xml:space="preserve">
-    <value>dataGridViewComboBoxColumn1</value>
-  </data>
-  <data name="dictionaryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
-  </data>
-  <data name="tbPron.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblCorrections.Text" xml:space="preserve">
-    <value>Corrections:</value>
-  </data>
-  <data name="&gt;&gt;tPronunciation.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="rtxbxPron.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="&gt;&gt;bAllStudents.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txbxTopic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 103</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>683, 28</value>
-  </data>
-  <data name="&gt;&gt;tsmiChangeSaveLoc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rtxbxPron.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="rtxbxPron.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblNew.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 170</value>
-  </data>
-  <data name="&gt;&gt;dgvPronunciation.Name" xml:space="preserve">
-    <value>dgvPronunciation</value>
-  </data>
-  <data name="&gt;&gt;calDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MonthCalendar, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txbxTopic.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="tbCorrections.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 140</value>
-  </data>
-  <data name="dgvPronunciation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 23</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="colCorOrig.HeaderText" xml:space="preserve">
-    <value>Original</value>
-  </data>
-  <data name="btnTodaysDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 69</value>
-  </data>
-  <data name="&gt;&gt;cbStudentName.Name" xml:space="preserve">
-    <value>cbStudentName</value>
-  </data>
-  <data name="&gt;&gt;rtxbxGrammar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblVocab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 171</value>
-  </data>
-  <data name="&gt;&gt;lHomework.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;studentNotesToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnTodaysDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 29</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="lblGrammar.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dataGridViewComboBoxColumn1.HeaderText" xml:space="preserve">
-    <value>New</value>
-  </data>
-  <data name="lblVocab.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;lblName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;calDate.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;tPronunciation.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblNew.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
-    <value>checkBox1</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>Original</value>
-  </data>
-  <data name="lblGrammar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>234, 171</value>
-  </data>
-  <data name="&gt;&gt;tNewLanguage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="rtxbxGrammar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>234, 194</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblNew.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 20</value>
-  </data>
-  <data name="tbPron.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 163</value>
-  </data>
-  <data name="tbCorrections.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 76</value>
-  </data>
-  <data name="&gt;&gt;lblGrammar.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblGrammar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cmbxStudentName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 28</value>
-  </data>
-  <data name="&gt;&gt;studentListToolStripMenuItem.Name" xml:space="preserve">
-    <value>studentListToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;lblVocab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbStudentName.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;txbxDate.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;reportHistoryToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
-    <value>toolStripMenuItem2</value>
-  </data>
-  <data name="rtxbxCorrections.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;tbCorrections.Parent" xml:space="preserve">
-    <value>splitContainer2.Panel2</value>
-  </data>
-  <data name="&gt;&gt;restartToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;tsmiAlwaysTop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="calDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 70</value>
-  </data>
-  <data name="&gt;&gt;dgvPronunciation.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tHomework.Name" xml:space="preserve">
-    <value>tHomework</value>
-  </data>
-  <data name="lblName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 39</value>
-  </data>
-  <data name="&gt;&gt;dgvCorrections.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="rtxbxNew.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 193</value>
-  </data>
-  <data name="&gt;&gt;calDate.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblPron.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblDate.Text" xml:space="preserve">
-    <value>Date of Class:</value>
-  </data>
-  <data name="calDate.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;lblVocab.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tbCorrections.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblDate.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tPronunciation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 23</value>
-  </data>
-  <data name="lblTopic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 20</value>
-  </data>
-  <data name="newWindowStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 26</value>
-  </data>
-  <data name="&gt;&gt;tsmiRestart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblName.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;lblPron.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;lblCorrections.Name" xml:space="preserve">
-    <value>lblCorrections</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnTodaysDate.Name" xml:space="preserve">
-    <value>btnTodaysDate</value>
-  </data>
-  <data name="&gt;&gt;rtxbxCorrections.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="tsmiNewStudent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 26</value>
-  </data>
-  <data name="msFile.Text" xml:space="preserve">
-    <value>File</value>
+  <data name="&gt;&gt;reportsDefaultOnToolStripMenuItem.Name" xml:space="preserve">
+    <value>reportsDefaultOnToolStripMenuItem</value>
   </data>
   <data name="viewStudentListToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 24</value>
   </data>
-  <data name="&gt;&gt;rtxbxCorrections.Name" xml:space="preserve">
-    <value>rtxbxCorrections</value>
+  <data name="&gt;&gt;lblPron.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txbxHomework.ZOrder" xml:space="preserve">
+  <data name="tsmiRestart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 26</value>
+  </data>
+  <data name="&gt;&gt;btnAddArray.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblGrammar.Name" xml:space="preserve">
+    <value>lblGrammar</value>
+  </data>
+  <data name="dgvPronunciation.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;txbxDate.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="btnExport.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblCorrections.Text" xml:space="preserve">
+    <value>Corrections:</value>
+  </data>
+  <data name="txbxTopic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 27</value>
+  </data>
+  <data name="&gt;&gt;clearFormOnSubmitToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;settingsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lessonListToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="lblTopic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 106</value>
+  </data>
+  <data name="rtxbxNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 165</value>
+  </data>
+  <data name="tbPron.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;dictionaryToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbPron.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;btnAddArray.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblDate.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;bAllStudents.Name" xml:space="preserve">
+    <value>bAllStudents</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblVocab.Name" xml:space="preserve">
+    <value>lblVocab</value>
+  </data>
+  <data name="rtxbxPron.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="changeLogToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 25</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Name" xml:space="preserve">
+    <value>splitContainer2</value>
+  </data>
+  <data name="&gt;&gt;studentListToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblPron.Text" xml:space="preserve">
+    <value>Pronunciation:</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblNew.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;txbxTopic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newWindowStripMenuItem.Name" xml:space="preserve">
+    <value>newWindowStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;colCorrNew.Name" xml:space="preserve">
+    <value>colCorrNew</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rtxbxVocab.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="tsmiOnlyRecent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 26</value>
+  </data>
+  <data name="&gt;&gt;tPronunciation.Name" xml:space="preserve">
+    <value>tPronunciation</value>
+  </data>
+  <data name="lblPron.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;calDate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbStudentName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblCorrections.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;tbNewLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 20</value>
+  </data>
+  <data name="&gt;&gt;rtxbxVocab.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;viewStudentListToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTopic.Name" xml:space="preserve">
+    <value>lblTopic</value>
+  </data>
+  <data name="tPronunciation.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;cbStudentName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>476, 36</value>
+  </data>
+  <data name="&gt;&gt;dgvPronunciation.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="tbNewLang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 76</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txbxTopic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 103</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="tsmiAlwaysTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 26</value>
+  </data>
+  <data name="&gt;&gt;chbReport.Name" xml:space="preserve">
+    <value>chbReport</value>
+  </data>
+  <data name="tsmiNewStudent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 26</value>
+  </data>
+  <data name="chbReport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>314, 0</value>
+  </data>
+  <data name="&gt;&gt;lblGrammar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="studentNotesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 24</value>
+  </data>
+  <data name="txbxDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 70</value>
+  </data>
+  <data name="&gt;&gt;restartToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rtxbxPron.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblHomework.Name" xml:space="preserve">
+    <value>lblHomework</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rtxbxCorrections.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;colCorNew.Name" xml:space="preserve">
+    <value>colCorNew</value>
+  </data>
+  <data name="reportHistoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rtxbxPron.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;tsmiNewStudent.Name" xml:space="preserve">
+    <value>tsmiNewStudent</value>
+  </data>
+  <data name="lblDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 73</value>
+  </data>
+  <data name="&gt;&gt;tDate.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tbCorrections.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 76</value>
+  </data>
+  <data name="lblName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="bAllStudents.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="tTopic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 86</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tPronunciation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
+  </data>
+  <data name="&gt;&gt;tPronunciation.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;rtxbxPron.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewComboBoxColumn1.Name" xml:space="preserve">
+    <value>dataGridViewComboBoxColumn1</value>
   </data>
   <data name="dgvNewLanguage.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
-  <data name="lblName.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;lblPron.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblVocab.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;viewStudentListToolStripMenuItem.Name" xml:space="preserve">
+    <value>viewStudentListToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvPronunciation.Name" xml:space="preserve">
+    <value>dgvPronunciation</value>
+  </data>
+  <data name="&gt;&gt;dgvNewLanguage.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="tsmiChangeSaveLoc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 26</value>
+  </data>
+  <data name="&gt;&gt;lblNew.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>568, 153</value>
+  </data>
+  <data name="&gt;&gt;calDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MonthCalendar, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tHomework.Name" xml:space="preserve">
+    <value>tHomework</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 125</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txbxHomework.Parent" xml:space="preserve">
+  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmbxStudentName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 28</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewComboBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewComboBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 24</value>
+  </data>
+  <data name="&gt;&gt;closeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblVocab.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;lblHomework.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rtxbxGrammar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>234, 194</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>683, 371</value>
+  </data>
+  <data name="&gt;&gt;dgvCorrections.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colCorOrig.HeaderText" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="lblCorrections.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 20</value>
+  </data>
+  <data name="&gt;&gt;msFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbxStudentName.Name" xml:space="preserve">
+    <value>cmbxStudentName</value>
+  </data>
+  <data name="&gt;&gt;lblTopic.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dgvPronunciation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splitContainer2.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;dictionaryToolStripMenuItem.Name" xml:space="preserve">
+    <value>dictionaryToolStripMenuItem</value>
+  </data>
+  <data name="dgvPronunciation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="lblCorrections.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;studentNotesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblVocab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 171</value>
+  </data>
+  <data name="&gt;&gt;rtxbxNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblName.Text" xml:space="preserve">
+    <value>Student Name:</value>
+  </data>
+  <data name="&gt;&gt;lblCorrections.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="tHomework.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 146</value>
+  </data>
+  <data name="&gt;&gt;tNewLanguage.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;msFile.Name" xml:space="preserve">
+    <value>msFile</value>
+  </data>
+  <data name="&gt;&gt;lblPron.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblDate.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="&gt;&gt;tPronunciation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tHomework.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblPron.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 20</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewComboBoxColumn2.Name" xml:space="preserve">
-    <value>dataGridViewComboBoxColumn2</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>Original</value>
-  </data>
-  <data name="btnAddArray.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dgvNewLanguage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;msFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblGrammar.Parent" xml:space="preserve">
-    <value>splitContainer2.Panel2</value>
-  </data>
-  <data name="&gt;&gt;studentNotesToolStripMenuItem.Name" xml:space="preserve">
-    <value>studentNotesToolStripMenuItem</value>
-  </data>
-  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 26</value>
-  </data>
-  <data name="lblPron.Text" xml:space="preserve">
-    <value>Pronunciation:</value>
-  </data>
-  <data name="&gt;&gt;lblCorrections.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="cbStudentName.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>476, 36</value>
-  </data>
-  <data name="tPronunciation.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rtxbxGrammar.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblVocab.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
-  </data>
-  <data name="&gt;&gt;colCorOrig.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer2</value>
-  </data>
-  <data name="lblTopic.Text" xml:space="preserve">
-    <value>Topic:</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel1.Name" xml:space="preserve">
-    <value>splitContainer2.Panel1</value>
-  </data>
-  <data name="&gt;&gt;lblNew.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsmiNewStudent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnTodaysDate.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblHomework.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="rtxbxGrammar.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblTopic.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblNew.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;dictionaryToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 57</value>
-  </data>
-  <data name="&gt;&gt;tDate.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;lblTopic.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="rtxbxPron.Location" type="System.Drawing.Point, System.Drawing">
-    <value>454, 193</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
-    <value>Column1</value>
-  </data>
-  <data name="&gt;&gt;btnExport.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tHomework.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="lblHomework.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbxStudentName.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnExport.Text" xml:space="preserve">
-    <value>Export</value>
-  </data>
-  <data name="&gt;&gt;closeToolStripMenuItem.Name" xml:space="preserve">
-    <value>closeToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;tbPron.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;diaSave.Name" xml:space="preserve">
-    <value>diaSave</value>
-  </data>
-  <data name="rtxbxCorrections.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 193</value>
   </data>
   <data name="&gt;&gt;tbCorrections.Type" xml:space="preserve">
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tsmiChangeSaveLoc.Name" xml:space="preserve">
-    <value>tsmiChangeSaveLoc</value>
+  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
   </data>
-  <data name="&gt;&gt;dgvCorrections.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;cmbxStudentName.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;msFile.Name" xml:space="preserve">
-    <value>msFile</value>
+  <data name="lblHomework.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="tTopic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 86</value>
+  <data name="rtxbxCorrections.Text" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;rtxbxNew.Name" xml:space="preserve">
-    <value>rtxbxNew</value>
+  <data name="rtxbxCorrections.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 193</value>
   </data>
-  <data name="lblDate.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="tPronunciation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+  <data name="restartToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 26</value>
+  </data>
+  <data name="lblNew.Text" xml:space="preserve">
+    <value>New:</value>
+  </data>
+  <data name="calDate.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="txbxHomework.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 27</value>
+  </data>
+  <data name="tNewLanguage.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;tNewLanguage.Name" xml:space="preserve">
+    <value>tNewLanguage</value>
+  </data>
+  <data name="&gt;&gt;rtxbxCorrections.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTopic.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;lblVocab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txbxHomework.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 136</value>
+  </data>
+  <data name="&gt;&gt;dgvCorrections.Name" xml:space="preserve">
+    <value>dgvCorrections</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblDate.Name" xml:space="preserve">
+    <value>lblDate</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblCorrections.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblVocab.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblPron.Location" type="System.Drawing.Point, System.Drawing">
+    <value>454, 170</value>
+  </data>
+  <data name="&gt;&gt;lblNew.Name" xml:space="preserve">
+    <value>lblNew</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>Column1</value>
+  </data>
+  <data name="&gt;&gt;txbxDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
   </data>
-  <metadata name="colCorrNew.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>en</value>
-  </metadata>
-  <metadata name="dataGridViewComboBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="tbNewLang.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lessonListToolStripMenuItem.Name" xml:space="preserve">
+    <value>lessonListToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;tHomework.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tbCorrections.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rtxbxPron.Location" type="System.Drawing.Point, System.Drawing">
+    <value>454, 193</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;restartToolStripMenuItem.Name" xml:space="preserve">
+    <value>restartToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;tsmiSaveLoc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dialogsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>503, 250</value>
+  </data>
+  <data name="&gt;&gt;calDate.Name" xml:space="preserve">
+    <value>calDate</value>
+  </data>
+  <data name="&gt;&gt;chbReport.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;tDate.Name" xml:space="preserve">
+    <value>tDate</value>
+  </data>
+  <data name="&gt;&gt;btnExport.Name" xml:space="preserve">
+    <value>btnExport</value>
+  </data>
+  <data name="btnTodaysDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 29</value>
+  </data>
+  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="tNewLanguage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 23</value>
+  </data>
+  <data name="rtxbxGrammar.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="tbPron.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;colCorOrig.Name" xml:space="preserve">
+    <value>colCorOrig</value>
+  </data>
+  <data name="tDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 57</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;rtxbxNew.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="studentListToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 24</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.Name" xml:space="preserve">
+    <value>splitContainer2.Panel1</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>683, 28</value>
+  </data>
+  <data name="&gt;&gt;btnExport.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmbxStudentName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="dgvNewLanguage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="&gt;&gt;lblPron.Name" xml:space="preserve">
+    <value>lblPron</value>
+  </data>
+  <data name="lblHomework.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;tTopic.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnTodaysDate.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="rtxbxPron.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="&gt;&gt;reportsDefaultOnToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmiNewStudent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvCorrections.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="tbPron.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 163</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="btnAddArray.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 70</value>
+  </data>
+  <data name="&gt;&gt;dgvCorrections.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tDate.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="colCorrNew.HeaderText" xml:space="preserve">
+    <value>Column1</value>
+  </data>
+  <data name="&gt;&gt;btnTodaysDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmiRestart.Name" xml:space="preserve">
+    <value>tsmiRestart</value>
+  </data>
+  <data name="&gt;&gt;lblName.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;cbStudentName.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lblGrammar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rtxbxNew.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 193</value>
+  </data>
+  <data name="&gt;&gt;tbNewLang.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;rtxbxCorrections.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="splitContainer2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="&gt;&gt;tbPron.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rtxbxGrammar.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnTodaysDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 69</value>
+  </data>
+  <data name="lblCorrections.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 170</value>
+  </data>
+  <data name="lblTopic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="lblHomework.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 20</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rtxbxCorrections.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 165</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="colCorOrig.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="colCorNew.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="colCorrNew.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="diaSave.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>152, 17</value>
   </metadata>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="colCorOrig.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>en</value>
+  </metadata>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>261, 17</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="colCorNew.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dataGridViewComboBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewComboBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewComboBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

@@ -102,6 +102,11 @@ namespace LessonCompanion {
         }
 
         private void lbStudentList_SelectedIndexChanged(object sender, EventArgs e) {
+            if (!button2.Enabled) {
+                button2.Enabled = true;
+                button3.Enabled = true;
+            }
+            
             dgvTopicList.Rows.Clear();
             FindLessonsForStudent();
         }

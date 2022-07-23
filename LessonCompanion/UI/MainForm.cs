@@ -92,10 +92,6 @@ namespace LessonCompanion {
                 //Set form to default state
                 ResetForm();
 
-                //initialise toolstrip items' event handlers
-                lessonListToolStripMenuItem.Click += lessonListToolStripMenuItem_Click;
-                studentListToolStripMenuItem.Click += studentListToolStripMenuItem_Click;
-
                 cbStudentName.Select();
 
                 //Testing();

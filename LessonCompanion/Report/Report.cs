@@ -122,6 +122,13 @@ namespace LessonCompanion.Report {
                     counter++;
                 }
 
+                //footer
+                document.Add(Components.CTextFooter(
+                    "If you enjoy my classes, then please rate me 5 stars at the end of each lesson!" +
+                    "\nTutors rely on 5-star ratings to survive, so a 5-star rating after every class is the best way that you can support us." +
+                    "\nThank you very much for supporting me!"
+                ));
+
                 document.Close();
 
                 return true;
